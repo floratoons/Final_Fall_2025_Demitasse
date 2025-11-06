@@ -13,14 +13,14 @@ public class camControl : MonoBehaviour, IGameStateManager
 
     public void GetState(gameState state)
     {
-        if (state.state == gameState.STATE.TALKING)
+        if (state.state == gameState.STATE.PUZZLE1)
         {
-            // do talking
+            // go to puzzle 1
             cam.Priority = priority;
         }
-        else if (state.state == gameState.STATE.NORMAL)
+        else if (state.state == gameState.STATE.MENU)
         {
-            // do not talking
+            // go to menu
             cam.Priority = 0;
         }
     }

@@ -4,9 +4,10 @@ public class gameState
 {
     public enum STATE 
     { 
-        NORMAL,
-        TALKING,
-        MENU
+        MENU,
+        PUZZLE1,
+        PUZZLE2,
+        PUZZLE3
     }
 
     // local variable holding the gamestate
@@ -16,6 +17,6 @@ public class gameState
     // resets the default variables and/or behaviors
     public gameState()
     {
-        state = STATE.NORMAL;
+        state = STATE.MENU;
     }
 }

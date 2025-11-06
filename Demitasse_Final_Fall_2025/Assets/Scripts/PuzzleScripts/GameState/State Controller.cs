@@ -31,14 +31,17 @@ public class StateController : MonoBehaviour
     {
         switch (currentState)
         {
-            case "Normal":
-                gState.state = gameState.STATE.NORMAL;
-                break;
-            case "Talking":
-                gState.state = gameState.STATE.TALKING;
-                break;
             case "Menu":
                 gState.state = gameState.STATE.MENU;
+                break;
+            case "Puzzle1":
+                gState.state = gameState.STATE.PUZZLE1;
+                break;
+            case "Puzzle2":
+                gState.state = gameState.STATE.PUZZLE2;
+                break;
+            case "Puzzle3":
+                gState.state = gameState.STATE.PUZZLE3;
                 break;
         }
         Debug.Log("The current gameState is " + gState.state);
