@@ -1,16 +1,17 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class puzzleButtonManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    StateController statecontroller;
 
-    // Update is called once per frame
-    void Update()
+    public void PuzzleNavigation()
     {
-        
+        statecontroller = StateController.instance;
+
+        string puzzleDestination = gameObject.tag;
+        // switches the current state to the attached button's tag (sets the puzzle destination)
+        statecontroller.switchState(puzzleDestination);
+        Debug.Log("Button clicked, tag=" + gameObject.tag);
     }
 }

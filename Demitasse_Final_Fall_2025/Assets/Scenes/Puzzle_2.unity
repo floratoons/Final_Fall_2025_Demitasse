@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 648899174}
   m_Layer: 5
   m_Name: PuzzleButton_2
-  m_TagString: Untagged
+  m_TagString: Puzzle2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1160,7 +1160,7 @@ GameObject:
   - component: {fileID: 1014754358}
   m_Layer: 5
   m_Name: PuzzleButton_3
-  m_TagString: Untagged
+  m_TagString: Puzzle3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1494,6 +1494,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055866888}
   m_CullTransparentMesh: 1
+--- !u!1 &1105765533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1105765535}
+  - component: {fileID: 1105765534}
+  m_Layer: 0
+  m_Name: StateController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1105765534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105765533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ca6236ad8e8e2b49a698665c8b2a656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StateController
+--- !u!4 &1105765535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105765533}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.72272, y: -5.21085, z: 29.60001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1192719583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,9 +1765,10 @@ GameObject:
   - component: {fileID: 1317764869}
   - component: {fileID: 1317764868}
   - component: {fileID: 1317764867}
+  - component: {fileID: 1317764870}
   m_Layer: 5
   m_Name: PuzzleButton_1
-  m_TagString: Untagged
+  m_TagString: Puzzle1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1791,7 +1836,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1317764868}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1317764870}
+        m_TargetAssemblyTypeName: puzzleButtonManager, Assembly-CSharp
+        m_MethodName: PuzzleNavigation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1317764868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1830,6 +1887,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317764865}
   m_CullTransparentMesh: 1
+--- !u!114 &1317764870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317764865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cec480ae02b43542bb01a3c886e3800, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::puzzleButtonManager
 --- !u!1 &1537753097
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,7 +2849,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2108473253}
-  - component: {fileID: 2108473252}
   - component: {fileID: 2108473251}
   m_Layer: 0
   m_Name: Puzzle Menu Camera
@@ -2832,14 +2900,6 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
---- !u!81 &2108473252
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108473250}
-  m_Enabled: 1
 --- !u!4 &2108473253
 Transform:
   m_ObjectHideFlags: 0
@@ -2872,3 +2932,4 @@ SceneRoots:
   - {fileID: 1042178811}
   - {fileID: 1906888928}
   - {fileID: 378170512}
+  - {fileID: 1105765535}
