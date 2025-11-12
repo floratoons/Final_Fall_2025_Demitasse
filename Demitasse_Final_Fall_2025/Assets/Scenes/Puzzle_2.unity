@@ -398,6 +398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::camControl
   cam: {fileID: 0}
   priority: 0
+  camID: 0
 --- !u!114 &378170511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1357,6 +1358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::camControl
   cam: {fileID: 0}
   priority: 0
+  camID: 0
 --- !u!1 &1055866888
 GameObject:
   m_ObjectHideFlags: 0
@@ -2415,6 +2417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::camControl
   cam: {fileID: 0}
   priority: 0
+  camID: 0
 --- !u!114 &1906888927
 MonoBehaviour:
   m_ObjectHideFlags: 0
