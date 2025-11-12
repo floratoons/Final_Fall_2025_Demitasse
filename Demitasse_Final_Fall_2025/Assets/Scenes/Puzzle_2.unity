@@ -376,7 +376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 378170512}
   - component: {fileID: 378170511}
-  - component: {fileID: 378170510}
+  - component: {fileID: 378170513}
   m_Layer: 0
   m_Name: Puzzle Cam 3
   m_TagString: Untagged
@@ -384,21 +384,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &378170510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378170509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5e4f19e99435d46b9de8c298dc4e17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::camControl
-  cam: {fileID: 0}
-  priority: 0
-  camID: 0
 --- !u!114 &378170511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,6 +442,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 24.942, y: 26.913, z: 8.599}
+--- !u!114 &378170513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378170509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a9aa43e4c2e5043b14240653f1ae1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::camControl
+  cam: {fileID: 0}
+  priority: 0
+  camID: 3
+  buttonManager: {fileID: 1254818378}
 --- !u!1 &486775581
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +690,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.6698113, g: 0.621714, b: 0.58450514, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -709,7 +710,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 648899175}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1906888929}
+        m_TargetAssemblyTypeName: camControl, Assembly-CSharp
+        m_MethodName: puzzleCamSwitch
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &648899175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1209,7 +1222,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.6698113, g: 0.621714, b: 0.58450514, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1229,7 +1242,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1014754359}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 378170513}
+        m_TargetAssemblyTypeName: camControl, Assembly-CSharp
+        m_MethodName: GetStateString
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Puzzle3
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1014754359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1353,12 +1378,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1042178810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5e4f19e99435d46b9de8c298dc4e17, type: 3}
+  m_Script: {fileID: 11500000, guid: 19a9aa43e4c2e5043b14240653f1ae1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::camControl
   cam: {fileID: 0}
   priority: 0
-  camID: 0
+  camID: 1
+  buttonManager: {fileID: 1254818378}
 --- !u!1 &1055866888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,6 +1737,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250456613}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1254818377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1254818379}
+  - component: {fileID: 1254818378}
+  m_Layer: 0
+  m_Name: ButtonManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1254818378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254818377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cec480ae02b43542bb01a3c886e3800, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::puzzleButtonManager
+  camLocationCount: 3
+  camcontrol: {fileID: 0}
+--- !u!4 &1254818379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254818377}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.09926, y: -8.47485, z: 29.60001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1317764865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,8 +1793,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1317764866}
   - component: {fileID: 1317764869}
-  - component: {fileID: 1317764868}
   - component: {fileID: 1317764867}
+  - component: {fileID: 1317764868}
   m_Layer: 5
   m_Name: PuzzleButton_1
   m_TagString: Untagged
@@ -1773,7 +1845,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.6698113, g: 0.621714, b: 0.58450514, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1793,7 +1865,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1317764868}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1042178813}
+        m_TargetAssemblyTypeName: camControl, Assembly-CSharp
+        m_MethodName: GetStateString
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Puzzle1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1317764868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2395,7 +2479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1906888928}
   - component: {fileID: 1906888927}
-  - component: {fileID: 1906888926}
+  - component: {fileID: 1906888929}
   m_Layer: 0
   m_Name: Puzzle Cam 2
   m_TagString: Untagged
@@ -2403,21 +2487,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1906888926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906888925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5e4f19e99435d46b9de8c298dc4e17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::camControl
-  cam: {fileID: 0}
-  priority: 0
-  camID: 0
 --- !u!114 &1906888927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2476,6 +2545,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 12.557, y: -11.149, z: -1.08}
+--- !u!114 &1906888929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906888925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a9aa43e4c2e5043b14240653f1ae1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::camControl
+  cam: {fileID: 0}
+  priority: 0
+  camID: 2
+  buttonManager: {fileID: 1254818378}
 --- !u!1 &1909912007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2783,8 +2868,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2108473253}
-  - component: {fileID: 2108473252}
   - component: {fileID: 2108473251}
+  - component: {fileID: 2108473254}
   m_Layer: 0
   m_Name: Puzzle Menu Camera
   m_TagString: Untagged
@@ -2835,14 +2920,6 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
---- !u!81 &2108473252
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108473250}
-  m_Enabled: 1
 --- !u!4 &2108473253
 Transform:
   m_ObjectHideFlags: 0
@@ -2858,6 +2935,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 5, y: 0, z: 0}
+--- !u!114 &2108473254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108473250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a9aa43e4c2e5043b14240653f1ae1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::camControl
+  cam: {fileID: 0}
+  priority: 0
+  camID: 0
+  buttonManager: {fileID: 1254818378}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2875,3 +2968,4 @@ SceneRoots:
   - {fileID: 1042178811}
   - {fileID: 1906888928}
   - {fileID: 378170512}
+  - {fileID: 1254818379}

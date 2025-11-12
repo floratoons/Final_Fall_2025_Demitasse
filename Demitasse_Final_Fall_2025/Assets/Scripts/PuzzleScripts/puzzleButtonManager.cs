@@ -1,16 +1,31 @@
+using UnityEditor;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
-public class puzzleButtonManager : MonoBehaviour
+
+public class puzzleButtonManager : MonoBehaviour, IGameStateManager
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public int camLocationCount;
+
+    public camControl camcontrol;
+
+    public void GetState(gameState state)
     {
-        
+        throw new System.NotImplementedException();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        if (Keyboard.current[Key.Escape].wasPressedThisFrame)
+        {
+            string sceneName = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(sceneName);
+
+            //camcontrol.GetStateString("Menu");
+            Debug.Log("Esc button clicked");
+        }
     }
 }
