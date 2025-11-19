@@ -12,6 +12,8 @@ public class camControl : MonoBehaviour, IGameStateManager
     public int priority;
     public int camID;
 
+    public Canvas puzzleCanvas;
+
     public puzzleButtonManager buttonManager;
 
     public void Start()
@@ -47,17 +49,25 @@ public class camControl : MonoBehaviour, IGameStateManager
 
         for (int i = 0; i < 4; i++)
         {
+            // i increments through all canvasses and will only ever set one of them correctly
+            // as "i" increments, it will undo the correct canvassses being turned on
+
             // depending on target camera's id#
             if (i == camID_)
             {
                 // move cam up priority
                 priority = 15;
                 cam.Priority = priority;
+
+                Debug.Log(puzzleCanvas + " set active");
+                puzzleCanvas.enabled = true;
             }
             // move all other cameras down priority
             else if (i != camID_)
             {
                 priority = 0;
+                // remember to turn canvas off when puzzle is complete
+                //puzzleCanvas.enabled = false;
             }
         }
     }
