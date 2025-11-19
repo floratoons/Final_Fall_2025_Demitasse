@@ -19,6 +19,7 @@ public class camControl : MonoBehaviour, IGameStateManager
         cam = GetComponent<CinemachineCamera>();
     }
 
+    // activates puzzleCamSwitch based on active state (got by clicking the buttons)
     public void GetStateString(string state)
     {
         switch (state)
@@ -27,7 +28,6 @@ public class camControl : MonoBehaviour, IGameStateManager
                 puzzleCamSwitch(0);
                 break;
             case "Puzzle1":
-                Debug.Log("Puzzle 1 button clicked");
                 puzzleCamSwitch(1);
                 break;
             case "Puzzle2":
@@ -39,33 +39,13 @@ public class camControl : MonoBehaviour, IGameStateManager
         }
     }
 
-    // switch state above is functional, GetState isn't doing anything now
-    public void GetState(gameState state)
-    {
-        // switching cameras depending on different states
-        if (state.state == gameState.STATE.MENU)
-        {
-            puzzleCamSwitch(0);
-        }
-        else if (state.state == gameState.STATE.PUZZLE1)
-        {
-            puzzleCamSwitch(1);
-        }
-        else if (state.state == gameState.STATE.PUZZLE2)
-        {
-            puzzleCamSwitch(2);
-        }
-        else if (state.state == gameState.STATE.PUZZLE3)
-        {
-            puzzleCamSwitch(3);
-        }
-    }
-
     public void puzzleCamSwitch(int camID_)
     {
         // cycle down list of active camera movements
-        
-        for (int i = 0; i < 3; i++)
+
+        Debug.Log("Cam " + camID_ + " clicked.");
+
+        for (int i = 0; i < 4; i++)
         {
             // depending on target camera's id#
             if (i == camID_)
@@ -80,5 +60,10 @@ public class camControl : MonoBehaviour, IGameStateManager
                 priority = 0;
             }
         }
+    }
+
+    public void GetState(gameState state)
+    {
+        throw new System.NotImplementedException();
     }
 }
