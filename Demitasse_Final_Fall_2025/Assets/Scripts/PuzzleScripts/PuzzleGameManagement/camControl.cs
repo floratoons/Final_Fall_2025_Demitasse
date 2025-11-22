@@ -5,6 +5,7 @@ using System.Security.Cryptography;
 using Unity.Cinemachine;
 using UnityEditorInternal;
 using UnityEngine;
+using System.Collections;
 
 public class camControl : MonoBehaviour, IGameStateManager
 {
@@ -58,9 +59,7 @@ public class camControl : MonoBehaviour, IGameStateManager
                 // move cam up priority
                 priority = 15;
                 cam.Priority = priority;
-
-                Debug.Log(puzzleCanvas + " set active");
-                puzzleCanvas.enabled = true;
+                StartCoroutine(CountToPuzzleCanvas());
             }
             // move all other cameras down priority
             else if (i != camID_)
@@ -75,5 +74,25 @@ public class camControl : MonoBehaviour, IGameStateManager
     public void GetState(gameState state)
     {
         throw new System.NotImplementedException();
+    }
+
+    // counts down briefly before activating the canvas with the puzzle stuff on it so that the camera has a chance to move beforehand
+    private IEnumerator CountToPuzzleCanvas()
+    {
+        while (true)
+        {
+            Debug.Log("Puzzle canvas counter activated");
+            yield return new WaitForSeconds(2);
+
+            if (puzzleCanvas.enabled == false)
+            {
+                Debug.Log(puzzleCanvas + " set active");
+                puzzleCanvas.enabled = true;
+            }
+            else
+            {
+                break;
+            }
+        }
     }
 }
