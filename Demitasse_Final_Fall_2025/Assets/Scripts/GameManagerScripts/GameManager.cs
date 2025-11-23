@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject letterGroup;
+    
     public void Update()
     {
         // temporary key to move to the puzzle scene
@@ -11,6 +13,11 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("Puzzle_2");
             Debug.Log("P button clicked");
+        }
+
+        if (Keyboard.current[Key.Escape].wasPressedThisFrame)
+        {
+            letterGroup.SetActive(false);
         }
     }
 
