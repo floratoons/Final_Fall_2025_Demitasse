@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class ItemInfo : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class DragDropManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -13,9 +13,11 @@ public class ItemInfo : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     public Transform lastPosition;
     public Image icon;
 
+    public GameObject displayObj;
+
     private void Start()
     {
-        //displayPiece = GameObject.FindGameObjectWithTag("displayText");
+        displayPiece = GameObject.FindGameObjectWithTag("displayText");
         icon = GetComponent<Image>();
     }
 
@@ -30,6 +32,7 @@ public class ItemInfo : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         lastPosition = transform.parent;
         transform.SetParent(lastPosition.root);
         transform.SetAsLastSibling();
+        //displayObj.GetComponent<TextMeshProUGUI>().text = currentPiece.lootDescription;
         icon.raycastTarget = false;
     }
 
@@ -43,6 +46,7 @@ public class ItemInfo : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     public void OnDrag(PointerEventData eventData)
     {
+        Debug.Log("Dragging");
         transform.position = Mouse.current.position.ReadValue();
     }
 }

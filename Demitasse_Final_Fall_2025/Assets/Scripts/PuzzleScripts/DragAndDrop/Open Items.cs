@@ -21,20 +21,20 @@ public class OpenItems : MonoBehaviour
             // creating a new gameobj in the scene
             // selecting random item type/identity from the list within the chest(containter) full of scriptable obj data
 
-            var randomItem = new GameObject();
-            var itemIcon = randomItem.AddComponent<Image>();
-            var itemData = randomItem.AddComponent<ItemInfo>();
+            var lootItem = new GameObject();
+            var itemIcon = lootItem.AddComponent<Image>();
+            var itemData = lootItem.AddComponent<DragDropManager>();
 
             // add a button and listener to the button calling 'lootClick' function in the lootData class 
-            var randomItemBtn = randomItem.AddComponent<Button>();
+            var randomItemBtn = lootItem.AddComponent<Button>();
             randomItemBtn.onClick.AddListener(itemData.itemClick);
 
             // assigning the randomly selected loot type/identity from the scripobj to the new gameobj
-            randomItem.GetComponent<ItemInfo>().currentPiece = allItems[Random.Range(0, allItems.Count)];
+            lootItem.GetComponent<DragDropManager>().currentPiece = allItems[Random.Range(0, allItems.Count)];
             itemIcon.sprite = itemData.currentPiece.icon;
 
             // assign those items to the container (within the grid layout group) in the scene
-            randomItem.transform.SetParent(itemGroupContainer.transform);
+            lootItem.transform.SetParent(itemGroupContainer.transform);
         }
 
 

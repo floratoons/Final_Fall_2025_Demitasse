@@ -6,24 +6,41 @@ public class PlacementManager : MonoBehaviour, IDropHandler
 {
     public GameObject placementGroup;
 
-    public placement saleInteraction;
+    public placement doThePlacement;
+
+    public PPiece pPieceDataSource_;
 
     public void OnDrop(PointerEventData eventData)
     {
+        //
         GameObject droppedObj = eventData.pointerDrag;
-        ItemInfo droppedItem = droppedObj.GetComponent<ItemInfo>();
+        
+        //
+        DragDropManager droppedItem = droppedObj.GetComponent<DragDropManager>();
 
         //placementGroup.GetComponent<WalletManager>().calcCash(droppedItem.currentPiece.cost);
-        //saleInteraction.Invoke(droppedItem.currentPiece.cost);
+
+
+        //doThePlacement.Invoke(droppedItem.currentPiece.cost);
 
         // talk to placementreader script to do logic for placed object?
 
-        saleInteraction.Invoke(droppedItem.currentPiece);
+        //doThePlacement.Invoke(droppedItem.currentPiece);
 
-        Destroy(droppedObj);
+        doThePlacement.Invoke(droppedItem.currentPiece.pieceName);
+        Debug.Log("Got " + droppedItem.currentPiece.pieceName);
+
+        /*if (pPieceDataSource_ != null)
+        {
+            Debug.Log("Accessed piece name: " + pPieceDataSource_.pieceName);
+        }
+        else
+        {
+            Debug.LogError("No piece name got");
+        }*/
     }
 }
 
 [System.Serializable]
-public class placement : UnityEvent<bool>
+public class placement : UnityEvent<string>
 { }
