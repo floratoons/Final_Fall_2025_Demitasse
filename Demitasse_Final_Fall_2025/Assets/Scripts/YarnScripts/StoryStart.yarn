@@ -5,7 +5,7 @@
 <<if $firstPlay == false>>
 <<jump introText>>
 <<else>>
-<<jump sceneOne>>
+<<jump ending>>
 <<endif>>
 ===
 title: introText
@@ -15,7 +15,6 @@ Pasha: I'd love to fulfill his request, agh, but I can't remember exactly what s
 Pasha: I would think a man his age wouldn't expect someone to remember a recipe from years ago…
 Pasha: I should try it though, let me look around for some ingredients to get started.
 Pasha: Let's get this started.
-<<set $firstPlay = true>>
 ===
 title: abstractionOne
 ---

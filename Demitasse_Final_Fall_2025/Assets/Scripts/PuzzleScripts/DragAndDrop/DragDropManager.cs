@@ -9,7 +9,7 @@ public class DragDropManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public PPiece currentPiece;
-    public GameObject displayPiece;
+    //public GameObject displayPiece;
     public Transform lastPosition;
     public Image icon;
 
@@ -17,7 +17,7 @@ public class DragDropManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
     private void Start()
     {
-        displayPiece = GameObject.FindGameObjectWithTag("displayText");
+        //displayPiece = GameObject.FindGameObjectWithTag("displayText");
         icon = GetComponent<Image>();
     }
 
@@ -48,5 +48,11 @@ public class DragDropManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     {
         Debug.Log("Dragging");
         transform.position = Mouse.current.position.ReadValue();
+        Debug.Log(eventData);
+        // add a new Vector3 with a z position as 0
+        // maintain x and y position of the cursor
+
+        // Functionality of the drag and drop fundamentally works, but due to the use of screen space - camera
+        // as the canvas renderer it is making the puzzle piece move very far in the space
     }
 }
