@@ -5,6 +5,7 @@ public class gameState
     public enum STATE 
     { 
         MENU,
+        TALKING,
         PUZZLE1,
         PUZZLE2,
         PUZZLE3

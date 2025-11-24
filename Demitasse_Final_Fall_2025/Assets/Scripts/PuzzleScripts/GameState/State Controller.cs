@@ -34,6 +34,9 @@ public class StateController : MonoBehaviour
             case "Menu":
                 gState.state = gameState.STATE.MENU;
                 break;
+            case "Talking":
+                gState.state = gameState.STATE.TALKING;
+                break;
             case "Puzzle1":
                 gState.state = gameState.STATE.PUZZLE1;
                 break;
