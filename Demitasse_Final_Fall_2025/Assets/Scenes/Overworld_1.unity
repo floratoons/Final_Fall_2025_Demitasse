@@ -668,6 +668,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   letterGroup: {fileID: 1788138776}
+  dialogTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 97208315}
+        m_TargetAssemblyTypeName: Yarn.Unity.DialogueRunner, YarnSpinner.Unity
+        m_MethodName: StartDialogue
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StoryStart
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1094055106}
+        m_TargetAssemblyTypeName: PortraitControl, Assembly-CSharp
+        m_MethodName: showPortrait
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StoryStart
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &242154078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1929,7 +1956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &867818656
 Transform:
   m_ObjectHideFlags: 0
@@ -3185,7 +3212,7 @@ MonoBehaviour:
   cancelDialogueAxis: 
   hurryUpLineKeyCode: 32
   nextLineKeyCode: 13
-  cancelDialogueKeyCode: 27
+  cancelDialogueKeyCode: 9
 --- !u!4 &1743312427
 Transform:
   m_ObjectHideFlags: 0
@@ -4035,7 +4062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 1
+  MoveSpeed: 0
   SprintSpeed: 0
   RotationSpeed: 1
   SpeedChangeRate: 10
