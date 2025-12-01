@@ -21,11 +21,11 @@ MonoBehaviour:
   m_OverrideGlobalSceneList: 1
   m_Scenes:
   - m_enabled: 1
-    m_path: Assets/Scenes/MainMenu_0.unity
+    m_path: Assets/Scenes/0_MainMenu.unity
   - m_enabled: 1
-    m_path: Assets/Scenes/Overworld_1.unity
+    m_path: Assets/Scenes/1_Overworld_Perfumery.unity
   - m_enabled: 1
-    m_path: Assets/Scenes/Puzzle_2.unity
+    m_path: Assets/Scenes/2_PuzzleTut.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings:
