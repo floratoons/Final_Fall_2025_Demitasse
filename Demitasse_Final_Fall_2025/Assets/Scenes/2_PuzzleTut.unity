@@ -689,8 +689,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486775581}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.043619405, y: 0, z: 0, w: 0.9990483}
-  m_LocalPosition: {x: 0, y: 1, z: -12}
+  m_LocalRotation: {x: 0.061810475, y: -0.072416715, z: 0.0044965846, w: 0.99544716}
+  m_LocalPosition: {x: 16.64, y: -0.4, z: 1.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1466,8 +1466,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 02870444213172f4ea7969c4441c7f69, type: 2}
   - {fileID: 11400000, guid: 2e16d1dbca0e01b488e23d0b485d090b, type: 2}
   - {fileID: 11400000, guid: ccb28485b3a6c6a44838149aed44b235, type: 2}
+  - {fileID: 11400000, guid: 1a9719cb7dc3a6a40bb75d0c07088dee, type: 2}
+  - {fileID: 11400000, guid: 5b902e90864bc25468619415e47fa07c, type: 2}
+  - {fileID: 11400000, guid: b7a35a5e3fb9740408d9e9c97482b620, type: 2}
+  - {fileID: 11400000, guid: 4b8ce797bfe7f714c894027af71fd0a8, type: 2}
   itemGroupContainer: {fileID: 127901857}
-  itemSize: 5
+  itemSize: 6
 --- !u!1 &729361419
 GameObject:
   m_ObjectHideFlags: 0
@@ -2539,7 +2543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
     Enabled: 1
-    m_Value: 0
+    m_Value: 10
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -3468,7 +3472,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265512227}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 486775583}
@@ -4234,7 +4238,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638782919}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 486775583}

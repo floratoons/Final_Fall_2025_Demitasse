@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6eeb2efd50f13844e85c7386435fbdda, type: 3}
-  m_Name: PPiece
+  m_Name: b_TL
   m_EditorClassIdentifier: Assembly-CSharp::PPiece
-  pieceName: 
+  pieceName: b_TL
   goalPlacement: {fileID: 0}
-  icon: {fileID: 0}
+  icon: {fileID: -706900294, guid: 699b0e7c01b75b04889b396e039cbd1d, type: 3}
+  cursorIcon: {fileID: 2800000, guid: 0277c928b7545ea4a9d5d5151b28fa63, type: 3}
   rightPiece: 0

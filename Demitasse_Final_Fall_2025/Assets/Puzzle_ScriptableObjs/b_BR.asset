@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6eeb2efd50f13844e85c7386435fbdda, type: 3}
-  m_Name: RightPieceBR 1
+  m_Name: b_BR
   m_EditorClassIdentifier: Assembly-CSharp::PPiece
-  pieceName: BR_RPiece
-  goalPlacement: {fileID: 1497269849177236144, guid: 67d1b0549f47a754695f0c045781039c, type: 3}
-  icon: {fileID: 49479588, guid: 9ea31edfba644454f8a4113c60a9929f, type: 3}
-  cursorIcon: {fileID: 2800000, guid: 9aeba909bc3d9624ca2a5c90f7fb2f2e, type: 3}
-  rightPiece: 1
+  pieceName: b_BR
+  goalPlacement: {fileID: 0}
+  icon: {fileID: 258330208, guid: 699b0e7c01b75b04889b396e039cbd1d, type: 3}
+  cursorIcon: {fileID: 2800000, guid: e8c20993c6ee86242a5f77e6e59755d8, type: 3}
+  rightPiece: 0
