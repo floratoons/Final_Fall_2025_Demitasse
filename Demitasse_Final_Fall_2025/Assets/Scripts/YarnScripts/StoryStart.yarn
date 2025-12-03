@@ -1,12 +1,12 @@
 ﻿title: StoryStart
 ---
 <<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
-<<declare $firstPlay = false>>
-<<if $firstPlay == false>>
-<<jump introText>>
-<<else>>
-<<jump ending>>
-<<endif>>
+//<<declare $firstPlay = false>>
+//<<if $firstPlay == false>>
+//<<jump introText>>
+//<<else>>
+//<<jump ending>>
+//<<endif>>
 ===
 title: introText
 ---
@@ -27,14 +27,15 @@ Henri: Pasha, my dear. We'll have to make sure to do everything you'll miss out 
 Pasha: Henri you are exaggerating. It'll take me some months to even get started. I mean I have the scents you've helped me create, but I'll need an entire catalog of products.
 Henri: I believe in you. Now let's go. You have one more thing to create for me before you can consider yourself a graduate from the school of Briard.
 Pasha: I remember that last creation was a day out disguised as a test. I didn't realize Henri thought so highly of what we made that day.
-Pasha: Base notes of stone, musk and some woods… Inspired by the moment on the bridge. I remember wanting something that would tell a story. Maybe that's why when I got here I wanted to use memories in the scents.
+Pasha: Base notes of stone, musk and some woods… Inspired by the moment on the bridge. I remember wanting something that would tell a story. 
+Pasha: Maybe that's why when I got here I wanted to use memories in the scents.
 Pasha: The rest of the day was us wandering around, maybe some florals of the town… Some amber, patchoulli… 
 Pasha: This should be something similar. I'll let it sit and pack it up before Henri gets here.
 ===
 title: sceneOne
 ---
 Henri: Woah ho ho. 
-Henri:This place is as busy as the patisserie down the street! Where are you, Pasha Poodl?
+Henri: This place is as busy as the patisserie down the street! Where are you, Pasha Poodl?
 Pasha: Henri? You're here! It completely slipped my mind that you were arriving today, this week past by in the blink of an eye.
 Henri: No worries dear, you look wonderful! Let me give you a hug. Seems like business has been well, seems like I wasn't wrong in my assessment before you left.
 Henri: So you did get my letter? Is time leaving you? What has Paris done to that prodigal brain of yours!
@@ -43,5 +44,60 @@ Pasha: Oui, merci Lola. Au revoir bonne journée.
 Pasha: Henri, come come, I wrapped it up in this old piece of fabric I still had from way back when.
 Henri: You say “way back when” but all that does is make me feel old and question what the Paris air does to your youth. Bwahahahack hck-hck! 
 Henri: Ahhck Sorry sorry I am coughing up a lung.
-Henri: Oh Pasha this is darling. It's scrap fabric from the old textiles shop down the road? You know Mrs. Denise still runs it? Her grandkids help her from time to time, but she still weaves and mends for everyone and their mother.
+Henri: Oh Pasha this is darling. It's scrap fabric from the old textiles shop down the road? 
+Henri: You know Mrs. Denise still runs it? Her grandkids help her from time to time, but she still weaves and mends for everyone and their mother.
+//TRIGGER FX
+Henri: Hmm. It's not quite the same. You've definitely grown as a perfumer, it smells amazing, but it's definitely not IT.
+Henri: That's all right! I can keep this one and we can try again later.
+Pasha: It isn't? Oh, I didn't have a chance to try it beforehand.
+Pasha: I was just in such a frenzy…
+Pasha: I tried recalling what I had put in it, but I only vaguely remembered the details of the day. 
+Pasha: I can try once more, don't worry, don't worry. I've got it.
+Henri: Pasha don't stress, life is too short to worry about this. It's just a perfume.
+Pasha: Ah ah, but it meant a lot to you. Seeing as how you had kept it all this time. I want you to have it again!
+Pasha: I know I can remake it too, it cannot be that hard. I've made countless perfumes since then, I am capable of-
+Henri: Why don't we catch up somewhere else. I'm sure you're free to leave the floor, your employees seem to be handling it just fine.
+Pasha: …But…
+Pasha: Ah, well. Then we can head a little down the street to the coffee shop I frequent.
+Henri: A cup of coffee is just what we need, come Pasha.
+===
+title: sceneTwo
+---
+Pasha: Henri, why don't you grab a table, I'll order.
+Henri: How kind, do you still remember this old man's coffee order?
+    >Pasha: A cafe au lait, one sugar.
+        Henri: Aha, of course of course.  
+    >Pasha: Actually I can't recall…
+        Henri: One cafe au lait! Just one sugar.
+Jacque: Welcome, welcome, how are you doing?
+Jacque: Iced vanilla bean latte for you?
+Customer: Yes! Thank you so much Jacque.
+Customer: Are you going to be at Francie's place on Saturday?
+Jacque: Haha, I have to see. Saturday is pretty busy for me.
+Jacque: After my shift that morning I think I'll be out with some friends, so depending on how they're feeling ya know?
+Jacque: Here's the latte.
+Customer: Of course! Well thank you, I'll see you around Jacque!
+Jacque: Au revoir bonne journée!
+Jacque: Pasha! How are you, how's the shop?
+Pasha: Good morning Jacque, I'm doing…
+Pasha: Well. The shop is even better.
+Jacque: Oh well I'm sure, with how many hours you spend there. I expect business must be booming and everyone is wearing a scent by the house of Poodl. You know I am!
+Pasha: Jacque, as always I am charmed. Though it looks like Cafe de Chartreux is doing just as good, I saw tons of new folk out front with your specialty latte drinks. 
+Pasha: Seems like your new ideas really bring life to the place. Your hospitality sure doesn't hurt either.
+Jacque: Well it's nothing really, I just know what people like because it's what I like. 
+Pasha: Yes, well it does seem to be an innate talent for you. 
+Pasha: A true people's person…
+Jacque: Aaaah. Too much, too much. My ego might fly away with how much you're inflating it.
+Jacque: What can I get your friend waiting at the table? 
+Jacque: Waaaaait, let me guess, café au lait? It seems to be the old man staple. 
+Pasha: Yes, yes, your drink guessing skills are still phenomenal. One sugar on the side for him-
+Jacque: Two sugars for you and a bit of steamed oat milk on the side. 
+Jacque: I got it Pasha, don't worry.
+Pasha: [i]sigh[/i]
+//Moves to the side.
+Pasha: Cafe de Chartreux has changed a lot since I first started coming here. Used to be an old rustic cafe on the corner, it still has that charm of course, but now they cater to the younger generation.
+Pasha: Enamored by the idea of a specialty drink instead of enjoying a plain espresso. 
+Pasha: Though I guess it isn't so bad, it gives Jacque some fuel for his passion and he is really good at what he does. 
+Pasha: Not even just the coffee part, talking to people. He does it all so effortlessly and everyone notices.
+Pasha: Even the customer before me wanted to hang out with him, just your local barista and his millionth side quest alongside his thriving work. 
 ===
