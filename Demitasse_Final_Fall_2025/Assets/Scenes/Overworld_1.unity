@@ -2344,6 +2344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 925214534}
   - component: {fileID: 925214533}
+  - component: {fileID: 925214535}
   m_Layer: 0
   m_Name: Camera_Perfume
   m_TagString: Untagged
@@ -2409,6 +2410,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 22.433, y: 16.088, z: 2.259}
+--- !u!114 &925214535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925214532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a9aa43e4c2e5043b14240653f1ae1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::camControl
+  cam: {fileID: 0}
+  priority: 0
+  camID: 0
+  puzzleCanvas: {fileID: 0}
+  buttonManager: {fileID: 0}
 --- !u!1 &1019695974
 GameObject:
   m_ObjectHideFlags: 0

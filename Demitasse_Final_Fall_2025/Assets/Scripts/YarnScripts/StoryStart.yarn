@@ -65,10 +65,8 @@ title: sceneTwo
 ---
 Pasha: Henri, why don't you grab a table, I'll order.
 Henri: How kind, do you still remember this old man's coffee order?
-    >Pasha: A cafe au lait, one sugar.
-        Henri: Aha, of course of course.  
-    >Pasha: Actually I can't recall…
-        Henri: One cafe au lait! Just one sugar.
+Pasha: Actually I can't recall…
+Henri: One cafe au lait! Just one sugar.
 Jacque: Welcome, welcome, how are you doing?
 Jacque: Iced vanilla bean latte for you?
 Customer: Yes! Thank you so much Jacque.
@@ -77,7 +75,7 @@ Jacque: Haha, I have to see. Saturday is pretty busy for me.
 Jacque: After my shift that morning I think I'll be out with some friends, so depending on how they're feeling ya know?
 Jacque: Here's the latte.
 Customer: Of course! Well thank you, I'll see you around Jacque!
-Jacque: Au revoir bonne journée!
+Jacque: [i]Au revoir bonne journée![/i]
 Jacque: Pasha! How are you, how's the shop?
 Pasha: Good morning Jacque, I'm doing…
 Pasha: Well. The shop is even better.
