@@ -47,6 +47,7 @@ public class PlacementReader : MonoBehaviour
         if (solvedPuzzle1 == true)
         {
             solvedText.text = "Puzzle 1 solved!";
+
         }
         else if (solvedPuzzle1 == false)
         {
@@ -54,5 +55,9 @@ public class PlacementReader : MonoBehaviour
         }
     }
 
+    public void PuzzleOnSolve()
+    {
+
+    }
 
 }
