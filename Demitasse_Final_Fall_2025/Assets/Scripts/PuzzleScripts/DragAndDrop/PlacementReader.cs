@@ -1,24 +1,10 @@
 using TMPro;
 using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlacementReader : MonoBehaviour
 {
-
-    // here we need to:
-
-    // get the stats on the puzzlepiece scriptable objs
-    // when a piece is placed,
-    // register whether the piece is in its right place
-
-    // if it is:
-    // make it not a raycast target (?)
-    // register that 1/4 pieces is placed right
-    // tell gamemanager 1/4 to puzzle complete
-    // take that piece off the list of items to spawn
-
-    // if it isn't:
-    // let it snap back to its place on the PItemGroup
-
     // ------------------------
 
     // temporary version:
@@ -47,7 +33,6 @@ public class PlacementReader : MonoBehaviour
         if (solvedPuzzle1 == true)
         {
             solvedText.text = "Puzzle 1 solved!";
-
         }
         else if (solvedPuzzle1 == false)
         {
@@ -55,9 +40,46 @@ public class PlacementReader : MonoBehaviour
         }
     }
 
+    // here we need to:
+
+    // get the stats on the puzzlepiece scriptable objs
+    // when a piece is placed,
+    // register whether the piece is in its right place
+
+    // if it is:
+    // make it not a raycast target (?)
+    // register that 1/4 pieces is placed right
+    // tell gamemanager 1/4 to puzzle complete
+    // take that piece off the list of items to spawn
+
+    // if it isn't:
+    // let it snap back to its place on the PItemGroup
+
+
+
+
     public void PuzzleOnSolve()
     {
+        Timer(2);
+
+        // sfx for puzzle solve feedback
+
+        Debug.Log("Puzzle 1 solved.");
+        // go back to main screen with "solved"
+
+        Timer(3);
+        // return to cafe
+        SceneManager.LoadScene(1);
 
     }
 
+    private IEnumerator Timer(int time)
+    {
+        while (true)
+        {
+            Debug.Log("Puzzle win state counter activated");
+            yield return new WaitForSeconds(time);
+            break;
+        }
+    }
 }

@@ -15,4 +15,5 @@ MonoBehaviour:
   pieceName: BL_RPiece
   goalPlacement: {fileID: 5815780232652121204, guid: 231459f53b673ef46ae72a5f499f5677, type: 3}
   icon: {fileID: 1659965260, guid: 9ea31edfba644454f8a4113c60a9929f, type: 3}
+  cursorIcon: {fileID: 2800000, guid: ca1060b586341c549b888027991b9396, type: 3}
   rightPiece: 1

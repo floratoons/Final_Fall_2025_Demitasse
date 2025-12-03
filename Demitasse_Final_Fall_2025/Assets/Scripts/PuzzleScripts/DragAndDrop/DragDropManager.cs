@@ -15,10 +15,17 @@ public class DragDropManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
     public GameObject displayObj;
 
-    private void Start()
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
+    public Texture2D cursorTexture;
+
+
+    public void Update()
     {
-        //displayPiece = GameObject.FindGameObjectWithTag("displayText");
         icon = GetComponent<Image>();
+        
+        cursorTexture = currentPiece.cursorIcon;
+        Debug.Log(cursorTexture);
     }
 
     public void itemClick()
@@ -34,6 +41,8 @@ public class DragDropManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         transform.SetAsLastSibling();
         //displayObj.GetComponent<TextMeshProUGUI>().text = currentPiece.lootDescription;
         icon.raycastTarget = false;
+
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -42,15 +51,26 @@ public class DragDropManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         transform.position = lastPosition.position;
         transform.SetParent(lastPosition);
         icon.raycastTarget = true;
+
+        Cursor.SetCursor(null, hotSpot, cursorMode);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         Debug.Log("Dragging");
-        transform.position = Mouse.current.position.ReadValue();
+
+
         Debug.Log(eventData);
-        // add a new Vector3 with a z position as 0
+
+        Vector2 mousePos = Mouse.current.position.ReadValue();
+        Debug.Log("Mouse x: " + mousePos.x + ", Mouse y: " + mousePos.y);
+
+        GameObject activeCanvasPos = GameObject.Find("PuzzleCanvas 1");
+
+        Vector3 mouseFollow = new Vector3(mousePos.x, mousePos.y, activeCanvasPos.transform.position.z + 1);
         // maintain x and y position of the cursor
+
+        transform.position = mouseFollow;
 
         // Functionality of the drag and drop fundamentally works, but due to the use of screen space - camera
         // as the canvas renderer it is making the puzzle piece move very far in the space

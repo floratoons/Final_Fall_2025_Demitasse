@@ -5,6 +5,6 @@ public class ButtonManager : MonoBehaviour
 {
     public void startGame()
     {
-        SceneManager.LoadScene("Overworld_1");
+        SceneManager.LoadScene(1);
     }
 }

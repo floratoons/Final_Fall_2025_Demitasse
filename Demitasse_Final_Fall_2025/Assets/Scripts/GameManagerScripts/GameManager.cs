@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
         // temporary key to move to the puzzle scene
         if (Keyboard.current[Key.P].wasPressedThisFrame)
         {
-            SceneManager.LoadScene("Puzzle_2");
+            SceneManager.LoadScene("2");
             Debug.Log("P button clicked");
         }
 
