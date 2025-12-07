@@ -60,7 +60,7 @@ public class DragDropManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     {
         whileDragging = true;
 
-        Debug.Log(eventData);
+        //Debug.Log(eventData);
 
         Vector2 mousePos = Mouse.current.position.ReadValue();
         //Debug.Log("Mouse x: " + mousePos.x + ", Mouse y: " + mousePos.y);

@@ -6,7 +6,7 @@ using UnityEditor;
 
 public class PlacementReader : MonoBehaviour, IGameStateManager
 {
-    public static PlacementReader instance { get; private set; }
+    public static PlacementReader Instance { get; private set; }
 
     // ------------------------
 
@@ -21,14 +21,28 @@ public class PlacementReader : MonoBehaviour, IGameStateManager
     public TMP_Text solvedText;
 
     PlacementManager placementManagerScript;
-    public bool placedTL;
-    public bool placedTR;
-    public bool placedBL;
-    public bool placedBR;
+    //public bool placedTL;
+    //public bool placedTR;
+    //public bool placedBL;
+    //public bool placedBR;
 
     public bool solvedPuzzle1 = false;
+    public int correctPlacementCountup = 0;
+    public camControl camControlScript;
 
-    camControl camControlScript;
+
+    public void Awake()
+    {
+        if(Instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public void Update()
     {
@@ -84,9 +98,10 @@ public class PlacementReader : MonoBehaviour, IGameStateManager
 
     public void CorrectPlacementCounter()
     {
+        Debug.Log("CorrectPlacementCounter called");
         
 
-        
+
         if (pPlacementGroups[0].GetComponent<PlacementManager>().correctPiecePlaced == true &&
             pPlacementGroups[1].GetComponent<PlacementManager>().correctPiecePlaced == true &&
             pPlacementGroups[2].GetComponent<PlacementManager>().correctPiecePlaced == true &&
@@ -99,18 +114,42 @@ public class PlacementReader : MonoBehaviour, IGameStateManager
             pPlacementGroups[2].GetComponent<PlacementManager>().correctPiecePlaced == true ||
             pPlacementGroups[3].GetComponent<PlacementManager>().correctPiecePlaced == true)
         {
+            correctPlacementCountup++;
             Debug.Log("Some correct placements");
         }
         else
         {
             Debug.Log("Puzzle not solved yet.");
         }
+
+        /*int correctPlacementCountup = 0;
+        int currentSlot = 0;
+
+        for (int i = 0; i < 3; i++)
+        {
+            if (i == currentSlot)
+            {
+                if (pPlacementGroups[currentSlot].GetComponent<PlacementManager>().correctPiecePlaced == true)
+                {
+                    correctPlacementCountup++;
+                    currentSlot++;
+                    Debug.Log("Counting");
+                }
+            }
+        }
+        if (correctPlacementCountup == 4)
+        {
+            Debug.Log("(PlacementReader) Counted placementCountup " + correctPlacementCountup);
+            Debug.Log("(PlacementReader) Counted currentslot " + currentSlot);
+            PuzzleOnSolve();
+        }*/
+
     }
 
 
     public void PuzzleOnSolve()
     {
-        StartCoroutine(Timer(2));
+        StartCoroutine(Timer());
 
         // sfx for puzzle solve feedback
 
@@ -118,10 +157,11 @@ public class PlacementReader : MonoBehaviour, IGameStateManager
 
         // go back to main screen with "solved"
 
-        StartCoroutine(Timer(3));
-        camControlScript.GetStateString("Complete");
+        StartCoroutine(Timer());
+        //camControlScript.GetStateString("Complete");
 
-        // return to cafe
+        // return to perfumery
+        Debug.Log("Finished puzzle");
         SceneManager.LoadScene(1);
 
     }
@@ -131,12 +171,17 @@ public class PlacementReader : MonoBehaviour, IGameStateManager
         throw new System.NotImplementedException();
     }
 
-    private IEnumerator Timer(int time)
+    private IEnumerator Timer()
     {
         while (true)
         {
-            Debug.Log("Puzzle win state counter activated");
-            yield return new WaitForSeconds(time);
+            Debug.Log("0");
+            yield return new WaitForSeconds(1);
+            Debug.Log("1");
+            yield return new WaitForSeconds(1);
+            Debug.Log("2");
+            yield return new WaitForSeconds(1);
+            Debug.Log("3");
             break;
         }
     }

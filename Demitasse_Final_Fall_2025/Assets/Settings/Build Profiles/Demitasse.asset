@@ -23,9 +23,13 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/0_MainMenu.unity
   - m_enabled: 1
-    m_path: Assets/Scenes/1_Overworld_Perfumery.unity
+    m_path: Assets/Scenes/1_Overworld.unity
   - m_enabled: 1
     m_path: Assets/Scenes/2_PuzzleTut.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/3_Overworld_Cafe.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/4_Puzzle.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings:

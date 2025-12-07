@@ -680,7 +680,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StoryStart
+          m_StringArgument: introText
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1094055106}
@@ -5153,8 +5153,8 @@ MonoBehaviour:
   jump: 0
   sprint: 0
   analogMovement: 0
-  cursorLocked: 1
-  cursorInputForLook: 1
+  cursorLocked: 0
+  cursorInputForLook: 0
 --- !u!1 &7442304616179214965
 GameObject:
   m_ObjectHideFlags: 0

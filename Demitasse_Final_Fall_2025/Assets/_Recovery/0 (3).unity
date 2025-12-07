@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 125305543}
   - component: {fileID: 125305542}
   - component: {fileID: 125305541}
+  - component: {fileID: 125305540}
   m_Layer: 5
   m_Name: PlacementGroup_TL
   m_TagString: Untagged
@@ -158,6 +159,22 @@ RectTransform:
   m_AnchoredPosition: {x: -131, y: 147}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &125305540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125305538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff53d5f1eff78c944aea63a9fd968c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventory
+  inventorySize: 1
+  placedRightPiece: 0
+  goalPiece: a_TL
+  placedPiece: {fileID: 0}
 --- !u!114 &125305541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,8 +194,8 @@ MonoBehaviour:
   pPieceDataSource_: {fileID: 0}
   droppedPieceName: 
   correctPiecePlaced: 0
-  placementGoalPiece: a_TL
   dragDropManagerScript: {fileID: 0}
+  placementReaderScript: {fileID: 0}
 --- !u!114 &125305542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,6 +554,7 @@ GameObject:
   - component: {fileID: 272416400}
   - component: {fileID: 272416399}
   - component: {fileID: 272416398}
+  - component: {fileID: 272416397}
   m_Layer: 5
   m_Name: PlacementGroup_BR
   m_TagString: Untagged
@@ -563,6 +581,22 @@ RectTransform:
   m_AnchoredPosition: {x: 130, y: -114}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &272416397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272416395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff53d5f1eff78c944aea63a9fd968c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventory
+  inventorySize: 1
+  placedRightPiece: 0
+  goalPiece: a_BR
+  placedPiece: {fileID: 0}
 --- !u!114 &272416398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,8 +616,8 @@ MonoBehaviour:
   pPieceDataSource_: {fileID: 0}
   droppedPieceName: 
   correctPiecePlaced: 0
-  placementGoalPiece: a_BR
   dragDropManagerScript: {fileID: 0}
+  placementReaderScript: {fileID: 0}
 --- !u!114 &272416399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,6 +693,7 @@ GameObject:
   - component: {fileID: 350063478}
   - component: {fileID: 350063477}
   - component: {fileID: 350063476}
+  - component: {fileID: 350063475}
   m_Layer: 5
   m_Name: PlacementGroup_TR
   m_TagString: Untagged
@@ -685,6 +720,22 @@ RectTransform:
   m_AnchoredPosition: {x: 128, y: 147}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &350063475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350063473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff53d5f1eff78c944aea63a9fd968c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventory
+  inventorySize: 1
+  placedRightPiece: 0
+  goalPiece: a_TR
+  placedPiece: {fileID: 0}
 --- !u!114 &350063476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,8 +755,8 @@ MonoBehaviour:
   pPieceDataSource_: {fileID: 0}
   droppedPieceName: 
   correctPiecePlaced: 0
-  placementGoalPiece: a_TR
   dragDropManagerScript: {fileID: 0}
+  placementReaderScript: {fileID: 0}
 --- !u!114 &350063477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -871,6 +922,7 @@ GameObject:
   - component: {fileID: 444205608}
   - component: {fileID: 444205607}
   - component: {fileID: 444205606}
+  - component: {fileID: 444205605}
   m_Layer: 5
   m_Name: PlacementGroup_BL
   m_TagString: Untagged
@@ -897,6 +949,22 @@ RectTransform:
   m_AnchoredPosition: {x: -131, y: -114}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &444205605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444205603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff53d5f1eff78c944aea63a9fd968c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventory
+  inventorySize: 1
+  placedRightPiece: 0
+  goalPiece: a_BL
+  placedPiece: {fileID: 0}
 --- !u!114 &444205606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -916,8 +984,8 @@ MonoBehaviour:
   pPieceDataSource_: {fileID: 0}
   droppedPieceName: 
   correctPiecePlaced: 0
-  placementGoalPiece: a_BL
   dragDropManagerScript: {fileID: 0}
+  placementReaderScript: {fileID: 0}
 --- !u!114 &444205607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1623,9 +1691,12 @@ MonoBehaviour:
   correctPlacedPiecesCount: 0
   pieceCountText: {fileID: 505820598}
   solvedText: {fileID: 1934514267}
+  placedTL: 0
+  placedTR: 0
+  placedBL: 0
+  placedBR: 0
   solvedPuzzle1: 0
   camControlScript: {fileID: 0}
-  slotID: 0
 --- !u!1 &610985236
 GameObject:
   m_ObjectHideFlags: 0
@@ -2078,60 +2149,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1 &754936364
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 754936366}
-  - component: {fileID: 754936365}
-  m_Layer: 0
-  m_Name: PuzzManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &754936365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754936364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60f9d4d93a3232649b0f10d4470c659d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::puzzleManagerTest
-  pGroup1: {fileID: 125305538}
-  pGroup2: {fileID: 350063473}
-  pGroup3: {fileID: 444205603}
-  pGroup4: {fileID: 272416395}
-  placed1: 0
-  placed2: 0
-  placed3: 0
-  placed4: 0
-  placedCounter: 0
-  puzzleComplete: 0
---- !u!4 &754936366
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754936364}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.40911, y: 0, z: 31.90939}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &770849991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2908,8 +2925,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042178810}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.17856175, y: 0, z: 0, w: 0.98392874}
-  m_LocalPosition: {x: 1.26, y: 6.72, z: -1.56}
+  m_LocalRotation: {x: 0.17873928, y: -0.06976007, z: 0.0039902134, w: 0.98141223}
+  m_LocalPosition: {x: 4.53, y: 6.72, z: -1.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3886,8 +3903,8 @@ RectTransform:
   - {fileID: 632193726}
   - {fileID: 1527867123}
   - {fileID: 1419644312}
-  - {fileID: 125305539}
   - {fileID: 350063474}
+  - {fileID: 125305539}
   - {fileID: 444205604}
   - {fileID: 272416396}
   - {fileID: 1934514266}
@@ -4566,6 +4583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff53d5f1eff78c944aea63a9fd968c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
+  inventorySize: 4
   placedRightPiece: 0
   goalPiece: TL_RPiece
   placedPiece: {fileID: 0}
@@ -4600,8 +4618,8 @@ MonoBehaviour:
   pPieceDataSource_: {fileID: 0}
   droppedPieceName: 
   correctPiecePlaced: 0
-  placementGoalPiece: 
   dragDropManagerScript: {fileID: 0}
+  placementReaderScript: {fileID: 0}
 --- !u!1 &1537753097
 GameObject:
   m_ObjectHideFlags: 0
@@ -6598,4 +6616,3 @@ SceneRoots:
   - {fileID: 1254818379}
   - {fileID: 579348552}
   - {fileID: 617575168}
-  - {fileID: 754936366}

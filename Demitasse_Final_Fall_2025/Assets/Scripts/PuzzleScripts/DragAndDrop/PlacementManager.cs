@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using System.Collections;
+using UnityEditor.Experimental.GraphView;
+using Unity.VisualScripting;
 
 public class PlacementManager : MonoBehaviour, IDropHandler
 {
@@ -15,20 +17,36 @@ public class PlacementManager : MonoBehaviour, IDropHandler
 
     public bool correctPiecePlaced = false;
 
-    DragDropManager dragDropManagerScript;
-    PlacementReader placementReaderScript;
+    public string placementGoalPiece = "";
+
+    public DragDropManager dragDropManagerScript;
+    private PlacementReader placementReaderScript;
+
+
+    public int slotID;
+
+    void Awake()
+    {
+        dragDropManagerScript = GetComponent<DragDropManager>();
+        //here
+        placementReaderScript = PlacementReader.Instance;
+    }
 
     public void OnDrop(PointerEventData eventData)
     {
         //
         GameObject droppedObj = eventData.pointerDrag;
-        
+        Debug.Log("Dropped Item");
+
+        if (transform.childCount < 1)
+        {
+            droppedObj.GetComponent<DragDropManager>().lastPosition = transform;
+        }
+
         //
         DragDropManager droppedItem = droppedObj.GetComponent<DragDropManager>();
 
         //placementGroup.GetComponent<WalletManager>().calcCash(droppedItem.currentPiece.cost);
-
-
         //doThePlacement.Invoke(droppedItem.currentPiece.cost);
 
         // talk to placementreader script to do logic for placed object?
@@ -40,9 +58,7 @@ public class PlacementManager : MonoBehaviour, IDropHandler
 
         droppedPieceName = droppedItem.currentPiece.pieceName;
 
-        placementReaderScript.CorrectPlacementCounter();
-
-        if (droppedItem.currentPiece.pieceName == placementGroup.GetComponent<Inventory>().goalPiece)
+        if (droppedItem.currentPiece.pieceName == placementGoalPiece)
         {
             Debug.Log("Correct piece placed");
             correctPiecePlaced = true;
@@ -52,12 +68,29 @@ public class PlacementManager : MonoBehaviour, IDropHandler
             Debug.Log("Incorrect placement");
             correctPiecePlaced = false;
 
-            StartCoroutine (Timer(4, droppedObj));
+            //StartCoroutine (Timer(4, droppedObj));
         }
 
+        CheckPlacement();
     }
 
-    private IEnumerator Timer(int time, GameObject droppedObj_)
+    void CheckPlacement()
+    {
+        StartCoroutine(Timer());
+        Debug.Log("CheckPlacement ran");
+        PlacementReader.Instance.CorrectPlacementCounter();
+
+        /*if (correctPiecePlaced == true)
+        {
+            PlacementReader.Instance.PuzzleOnSolve();
+        }
+        else
+        {
+            Debug.Log("Checked placement, didn't run PuzzleOnSolve");
+        }*/
+    }
+
+    /*private IEnumerator Timer(int time, GameObject droppedObj_)
     {
         while (true)
         {
@@ -73,8 +106,23 @@ public class PlacementManager : MonoBehaviour, IDropHandler
                 break;
             }
         }
-    }
+    }*/
 
+    private IEnumerator Timer()
+    {
+        while (true)
+        {
+            Debug.Log("0");
+            yield return new WaitForSeconds(1);
+            Debug.Log("1");
+            yield return new WaitForSeconds(1);
+            Debug.Log("2");
+            yield return new WaitForSeconds(1);
+            Debug.Log("3");
+            yield return new WaitForSeconds(1);
+            break;
+        }
+    }
 }
 
 

@@ -1623,9 +1623,12 @@ MonoBehaviour:
   correctPlacedPiecesCount: 0
   pieceCountText: {fileID: 505820598}
   solvedText: {fileID: 1934514267}
+  placedTL: 0
+  placedTR: 0
+  placedBL: 0
+  placedBR: 0
   solvedPuzzle1: 0
   camControlScript: {fileID: 0}
-  slotID: 0
 --- !u!1 &610985236
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,7 +2097,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &754936365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3886,8 +3889,8 @@ RectTransform:
   - {fileID: 632193726}
   - {fileID: 1527867123}
   - {fileID: 1419644312}
-  - {fileID: 125305539}
   - {fileID: 350063474}
+  - {fileID: 125305539}
   - {fileID: 444205604}
   - {fileID: 272416396}
   - {fileID: 1934514266}
