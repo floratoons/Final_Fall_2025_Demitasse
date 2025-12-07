@@ -19,13 +19,14 @@ public class DragDropManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     public Vector2 hotSpot = Vector2.zero;
     public Texture2D cursorTexture;
 
+    public bool whileDragging = false;
 
     public void Update()
     {
         icon = GetComponent<Image>();
         
         cursorTexture = currentPiece.cursorIcon;
-        Debug.Log(cursorTexture);
+        //Debug.Log(cursorTexture);
     }
 
     public void itemClick()
@@ -57,8 +58,7 @@ public class DragDropManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("Dragging");
-
+        whileDragging = true;
 
         Debug.Log(eventData);
 
@@ -71,8 +71,5 @@ public class DragDropManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         // maintain x and y position of the cursor
 
         transform.position = mouseFollow;
-
-        // Functionality of the drag and drop fundamentally works, but due to the use of screen space - camera
-        // as the canvas renderer it is making the puzzle piece move very far in the space
     }
 }

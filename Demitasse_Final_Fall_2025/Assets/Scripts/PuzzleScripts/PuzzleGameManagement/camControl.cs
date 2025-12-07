@@ -39,6 +39,9 @@ public class camControl : MonoBehaviour, IGameStateManager
             case "Puzzle3":
                 puzzleCamSwitch(3);
                 break;
+            case "Complete":
+                puzzleCamSwitch(0);
+                break;
         }
     }
 

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using System.Collections;
 
 public class PlacementManager : MonoBehaviour, IDropHandler
 {
@@ -9,6 +10,13 @@ public class PlacementManager : MonoBehaviour, IDropHandler
     public placement doThePlacement;
 
     public PPiece pPieceDataSource_;
+
+    public string droppedPieceName;
+
+    public bool correctPiecePlaced = false;
+
+    DragDropManager dragDropManagerScript;
+    PlacementReader placementReaderScript;
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -30,17 +38,48 @@ public class PlacementManager : MonoBehaviour, IDropHandler
         doThePlacement.Invoke(droppedItem.currentPiece.pieceName);
         Debug.Log("Got " + droppedItem.currentPiece.pieceName);
 
-        /*if (pPieceDataSource_ != null)
+        droppedPieceName = droppedItem.currentPiece.pieceName;
+
+        placementReaderScript.CorrectPlacementCounter();
+
+        if (droppedItem.currentPiece.pieceName == placementGroup.GetComponent<Inventory>().goalPiece)
         {
-            Debug.Log("Accessed piece name: " + pPieceDataSource_.pieceName);
+            Debug.Log("Correct piece placed");
+            correctPiecePlaced = true;
         }
         else
         {
-            Debug.LogError("No piece name got");
-        }*/
+            Debug.Log("Incorrect placement");
+            correctPiecePlaced = false;
+
+            StartCoroutine (Timer(4, droppedObj));
+        }
+
     }
+
+    private IEnumerator Timer(int time, GameObject droppedObj_)
+    {
+        while (true)
+        {
+            if (droppedObj_ == isActiveAndEnabled)
+            {
+                yield return new WaitForSeconds(time);
+                Destroy(droppedObj_);
+                dragDropManagerScript.whileDragging = false;
+                Debug.Log("Destroyed incorrect placed piece");
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+
 }
+
+
 
 [System.Serializable]
 public class placement : UnityEvent<string>
 { }
+

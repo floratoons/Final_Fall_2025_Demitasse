@@ -46,6 +46,9 @@ public class StateController : MonoBehaviour
             case "Puzzle3":
                 gState.state = gameState.STATE.PUZZLE3;
                 break;
+            case "Complete":
+                gState.state = gameState.STATE.COMPLETE;
+                break;
         }
         Debug.Log("The current gameState is " + gState.state);
 

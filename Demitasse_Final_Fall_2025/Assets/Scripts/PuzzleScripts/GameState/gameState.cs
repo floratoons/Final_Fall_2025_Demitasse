@@ -8,7 +8,8 @@ public class gameState
         TALKING,
         PUZZLE1,
         PUZZLE2,
-        PUZZLE3
+        PUZZLE3,
+        COMPLETE
     }
 
     // local variable holding the gamestate
