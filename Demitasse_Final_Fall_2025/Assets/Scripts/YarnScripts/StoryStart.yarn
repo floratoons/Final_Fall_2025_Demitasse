@@ -167,6 +167,8 @@ Henri: Aha ha. Well that's a good sign of a good person, if they enjoy your perf
 Henri: I am sorry. Just don't think I have ever seen you with someone in all my years of knowing you.
 Henri: Silly me for assuming like that.
 Henri: Hmm...
+//zoom in
+<<LoadDemitasseZoom "Demitasse_Anim">>
 ===
 title: abstractionTwo
 position: 197,-250
