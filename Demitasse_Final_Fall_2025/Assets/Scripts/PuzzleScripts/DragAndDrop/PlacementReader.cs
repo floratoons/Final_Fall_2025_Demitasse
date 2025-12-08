@@ -68,34 +68,6 @@ public class PlacementReader : MonoBehaviour, IGameStateManager
 
     }
 
-    // here i would've liked to:
-
-    // get the stats on the puzzlepiece scriptable objs
-    // when a piece is placed,
-    // register whether the piece is in its right place
-
-    // if it is:
-    // register that 1/4 pieces is placed right
-    // tell gamemanager 1/4 to puzzle complete
-    // take that piece off the list of items to spawn
-
-    // if it isn't:
-    // let it snap back to its place on the PItemGroup
-
-    /*public void PlacementReading()
-    {
-        if (placementManagerScript.droppedPieceName == gameObject.GetComponent<Inventory>().goalPiece)
-        {
-            correctPlacedPiecesCount++;
-            pieceCountText.text = "Pieces: " + correctPlacedPiecesCount + "/4";
-        }
-        else
-        {
-            Debug.Log("Incorrect piece placed");
-            pieceCountText.text = "Pieces: " + correctPlacedPiecesCount + "/4";
-        }
-    }*/
-
     public void CorrectPlacementCounter()
     {
         Debug.Log("CorrectPlacementCounter called");
@@ -162,7 +134,7 @@ public class PlacementReader : MonoBehaviour, IGameStateManager
 
         // return to perfumery
         Debug.Log("Finished puzzle");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
 
     }
 

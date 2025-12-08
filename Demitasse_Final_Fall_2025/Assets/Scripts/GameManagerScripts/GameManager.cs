@@ -25,8 +25,11 @@ public class GameManager : MonoBehaviour
 
         if (Keyboard.current[Key.Escape].wasPressedThisFrame)
         {
-            letterGroup.SetActive(false);
-            startVisited = true;
+            if (letterGroup != null)
+            {
+                letterGroup.SetActive(false);
+            }
+                startVisited = true;
         }
 
         if (Keyboard.current[Key.Escape].wasPressedThisFrame && introDialogueRead == false)
