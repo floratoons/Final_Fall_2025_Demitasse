@@ -122,6 +122,14 @@ public class PlacementManager : MonoBehaviour, IDropHandler
             break;
         }
     }
+
+    void Update()
+    {
+        if (gameObject.transform.childCount == 0)
+        {
+            correctPiecePlaced = false;
+        }
+    }
 }
 
 

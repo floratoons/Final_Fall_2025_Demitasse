@@ -21,6 +21,8 @@ public class DragDropManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
     public bool whileDragging = false;
 
+    public int activePuzzleCanvas;
+
     public void Update()
     {
         icon = GetComponent<Image>();
@@ -65,7 +67,7 @@ public class DragDropManager : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         Vector2 mousePos = Mouse.current.position.ReadValue();
         //Debug.Log("Mouse x: " + mousePos.x + ", Mouse y: " + mousePos.y);
 
-        GameObject activeCanvasPos = GameObject.Find("PuzzleCanvas 1");
+        GameObject activeCanvasPos = GameObject.Find(transform.parent.name);
 
         Vector3 mouseFollow = new Vector3(mousePos.x, mousePos.y, activeCanvasPos.transform.position.z + 1);
         // maintain x and y position of the cursor

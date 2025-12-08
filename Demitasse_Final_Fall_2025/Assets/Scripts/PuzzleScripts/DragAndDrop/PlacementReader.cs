@@ -10,19 +10,14 @@ public class PlacementReader : MonoBehaviour, IGameStateManager
 {
     public static PlacementReader Instance { get; private set; }
 
-    // ------------------------
-
-    // temporary version:
-    // get the PPlacementGroup and keep track of how many children,
-    // change counter based on amount,
-    // do an event when the puzzle is solved
-
     public GameObject[] pPlacementGroups;
     public int correctPlacedPiecesCount = 0;
 
     PlacementManager placementManagerScript;
 
     public bool solvedPuzzle1 = false;
+    public bool solvedPuzzle2 = false;
+    public bool solvedPuzzle3 = false;
     public int correctPlacementCountup = 0;
     public camControl camControlScript;
 
@@ -50,7 +45,13 @@ public class PlacementReader : MonoBehaviour, IGameStateManager
 
     public void Update()
     {
-        
+        if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            if (Keyboard.current[Key.Digit0].wasPressedThisFrame)
+            {
+                SceneManager.LoadScene(5);
+            }
+        }
     }
 
     public void CorrectPlacementCounter()
@@ -108,12 +109,6 @@ public class PlacementReader : MonoBehaviour, IGameStateManager
         // i think we'd also 
         //camControlScript.GetStateString("Complete");
         winCanvas.SetActive(true);
-
-        if (solvedPuzzle1 == true && winCanvas.activeInHierarchy == true)
-        {
-            Debug.Log("Got to line where we'd read mouse input");
-            SceneManager.LoadScene(3);
-        }
     }
 
     private IEnumerator Timer()
