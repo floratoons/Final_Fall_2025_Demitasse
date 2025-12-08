@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
             if (letterGroup != null)
             {
                 letterGroup.SetActive(false);
+                // this makes sure the script is only looking to turn off the letter if there is a letter TO turn off ^_^
             }
                 startVisited = true;
         }
