@@ -3,7 +3,7 @@ using NUnit.Framework;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using Unity.Cinemachine;
-using UnityEditorInternal;
+//using UnityEditorInternal;
 using UnityEngine;
 using System.Collections;
 

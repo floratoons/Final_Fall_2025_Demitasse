@@ -29,7 +29,10 @@ public class GameManager : MonoBehaviour
             // next dialogue for after tutorial
         }
 
-        cameraToAdjust.GetComponent<CinemachineInputAxisController>().enabled = false;
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            cameraToAdjust.GetComponent<CinemachineInputAxisController>().enabled = false;
+        }
     }
 
     public void Update()
