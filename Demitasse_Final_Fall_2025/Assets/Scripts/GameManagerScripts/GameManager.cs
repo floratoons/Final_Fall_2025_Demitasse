@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
 using System.Diagnostics.Contracts;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -12,7 +13,24 @@ public class GameManager : MonoBehaviour
 
     private bool startVisited = false;
 
-    public bool introDialogueRead = false;
+    public bool introDialogueStarted = false;
+
+    public GameObject cameraToAdjust;
+    public bool camMovementLock;
+
+    private void Start()
+    {
+        introDialogueStarted = false;
+        camMovementLock = true;
+        
+        if (startVisited == true)
+        {
+            letterGroup.SetActive(false);
+            // next dialogue for after tutorial
+        }
+
+        cameraToAdjust.GetComponent<CinemachineInputAxisController>().enabled = false;
+    }
 
     public void Update()
     {
@@ -33,21 +51,16 @@ public class GameManager : MonoBehaviour
                 startVisited = true;
         }
 
-        if (Keyboard.current[Key.Escape].wasPressedThisFrame && introDialogueRead == false)
+        if (Keyboard.current[Key.Escape].wasPressedThisFrame && introDialogueStarted == false)
         {
             dialogTrigger.Invoke();
-            introDialogueRead = true;
+            introDialogueStarted = true;
         }
     }
 
-    private void Start()
+    public void cameraUnlock()
     {
-        introDialogueRead = false;
-        
-        if (startVisited == true)
-        {
-            letterGroup.SetActive(false);
-            // next dialogue for after tutorial
-        }
+        Debug.Log("Would be starting the investigation");
+        cameraToAdjust.GetComponent<CinemachineInputAxisController>().enabled = true;
     }
 }

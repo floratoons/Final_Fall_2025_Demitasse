@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
+using UnityEngine.SceneManagement;
 
 public class PortraitControl : MonoBehaviour, IGameStateManager
 {

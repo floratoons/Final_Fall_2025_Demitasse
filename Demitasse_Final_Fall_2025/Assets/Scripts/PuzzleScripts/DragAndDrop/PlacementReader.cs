@@ -112,11 +112,7 @@ public class PlacementReader : MonoBehaviour, IGameStateManager
         if (solvedPuzzle1 == true && winCanvas.activeInHierarchy == true)
         {
             Debug.Log("Got to line where we'd read mouse input");
-            if (Mouse.current.leftButton.wasPressedThisFrame)
-            {
-                
-                SceneManager.LoadScene(3);
-            }
+            SceneManager.LoadScene(3);
         }
     }
 
