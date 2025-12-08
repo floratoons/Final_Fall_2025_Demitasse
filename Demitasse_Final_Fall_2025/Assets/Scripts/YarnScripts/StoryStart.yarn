@@ -10,6 +10,7 @@
 ===
 title: introText
 ---
+<<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
 Pasha: Henri is visiting the city. What a rare occasion.
 Pasha: I'd love to fulfill his request, agh, but I can't remember exactly what scent he's referring to. 
 Pasha: I would think a man his age wouldn't expect someone to remember a recipe from years ago...
@@ -38,52 +39,66 @@ Pasha: The rest of the day was us wandering around, maybe some florals of the to
 Pasha: This should be something similar. I'll let it sit and pack it up before Henri gets here.
 ===
 title: sceneOne
+position: -27,-97
 ---
+<<changeNPCPortrait PortraitContainer "placeHolder_Henri">>
 Henri: Woah ho ho. 
-Henri: This place is as busy as the patisserie down the street! 
-Henri: Where are you, Pasha Poodl?
-Pasha: Henri? You're here! 
-Pasha: It completely slipped my mind that you were arriving today, this week past by in the blink of an eye.
+Henri: This place is as busy as the patisserie down the street! Where are you, Pasha Poodl?
+<<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
+Pasha: Henri? You're here! It completely slipped my mind that you were arriving today, this week past by in the blink of an eye.
+<<changeNPCPortrait PortraitContainer "placeHolder_Henri">>
 Henri: No worries dear, you look wonderful! Let me give you a hug. 
-Henri: Seems like business has been well, seems like I wasn't wrong in my assessment before you left.
+Henri: Business has been well, seems like I wasn't wrong in my assessment before you left.
 Henri: So you did get my letter? Is time leaving you? What has Paris done to that prodigal brain of yours!
+<<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
 Pasha: No no, I made the scent for you. Let me just grab it after I'm finished with this customer. 
-Pasha: [i]Oui, merci Lola. Au revoir bonne journée.[/i] 
+Pasha: [i]Oui, merci Lola. Au revoir bonne journée.[/i]
 Pasha: Henri, come come, I wrapped it up in this old piece of fabric I still had from way back when.
-Henri: You say "way back when" but all that does is make me feel old- 
-Henri: -and question what the Paris air does to your youth. Bwahahahack hck-hck! 
+<<changeNPCPortrait PortraitContainer "placeHolder_Henri">>
+Henri: You say “way back when” but all that does is make me feel old and question what the Paris air does to your youth. Bwahahahack hck-hck! 
 Henri: [i]*Ahhck hck-hck*[/i]
-Henri: -Sorry sorry, I'm coughing up a lung.
-Henri: Oh Pasha this is darling! It's scrap fabric from the old textiles shop down the road? 
-Henri: You know Mrs. Denise still runs it? 
-Henri: Her grandkids help her from time to time, but she still weaves and mends for everyone and their mother. Bwahah!
+Henri: Ahhck Sorry sorry I am coughing up a lung.
+Henri: Oh Pasha this is darling. It's scrap fabric from the old textiles shop down the road? 
+Henri: You know Mrs. Denise still runs it? Her grandkids help her from time to time, but she still weaves and mends for everyone and their mother.
 //TRIGGER FX
 Henri: [i]*Psshhhhh*[/i]
 Henri: [i]*Sniff sniff*[/i]
 Henri: ... Hmm ...
 Henri: [i]*Sniff*[/i]
 Henri: I see... it's not quite the same. You've definitely grown as a perfumer.
-Henri: It smells amazing, but it's definitely not IT.
 Henri: That's all right! I can keep this one and we can try again later.
+<<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
 Pasha: It isn't? Oh, I didn't have a chance to try it beforehand.
-Pasha: I was just in such a frenzy...
+Pasha: I was just in such a frenzy…
 Pasha: I tried recalling what I had put in it, but I only vaguely remembered the details of the day. 
 Pasha: I can try once more, don't worry, don't worry. I've got it.
+<<changeNPCPortrait PortraitContainer "placeHolder_Henri">>
 Henri: Pasha don't stress, life is too short to worry about this. It's just a perfume.
+<<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
 Pasha: Ah ah, but it meant a lot to you. Seeing as how you had kept it all this time. I want you to have it again!
 Pasha: I know I can remake it too, it cannot be that hard. I've made countless perfumes since then, I am capable of-
-Henri: Pasha. Why don't we catch up somewhere else. 
-Henri: I'm sure you're free to leave the floor, your employees seem to be handling it just fine.
-Pasha: ...But...
+<<changeNPCPortrait PortraitContainer "placeHolder_Henri">>
+Henri: Why don't we catch up somewhere else. I'm sure you're free to leave the floor, your employees seem to be handling it just fine.
+<<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
+Pasha: …But…
 Pasha: Ah, well. Then we can head a little down the street to the coffee shop I frequent.
+<<changeNPCPortrait PortraitContainer "placeHolder_Henri">>
 Henri: A cup of coffee is just what we need, come Pasha.
+<<LoadScene "4_Overworld_Cafe">>
+//jump to next scene transition
 ===
 title: sceneTwo
+position: -29,-249
 ---
+<<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
 Pasha: Henri, why don't you grab a table, I'll order.
+<<changeNPCPortrait PortraitContainer "placeHolder_Henri">>
 Henri: How kind, do you still remember this old man's coffee order?
-Pasha: Actually I can't recall...
+<<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
+Pasha: Actually I can't recall…
+<<changeNPCPortrait PortraitContainer "placeHolder_Henri">>
 Henri: One cafe au lait! Just one sugar.
+<<changeNPCPortrait PortraitContainer "placeHolder_Jacque">>
 Jacque: Welcome, welcome, how are you doing?
 Jacque: Iced vanilla bean latte for you?
 Customer: Yes! Thank you so much Jacque.
@@ -94,25 +109,106 @@ Jacque: Here's the latte.
 Customer: Of course! Well thank you, I'll see you around Jacque!
 Jacque: [i]Au revoir bonne journée![/i]
 Jacque: Pasha! How are you, how's the shop?
-Pasha: Good morning Jacque, I'm doing...
+<<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
+Pasha: Good morning Jacque, I'm doing…
 Pasha: Well. The shop is even better.
-Jacque: Oh well I'm sure, with how many hours you spend there. I expect business must be booming and everyone is wearing a scent by the house of Poodl. You know I am!
-Pasha: Jacque, as always I am charmed. Though it looks like Cafe de Chartreux is doing just as good, I saw tons of new folk out front with your specialty latte drinks. 
+<<changeNPCPortrait PortraitContainer "placeHolder_Jacque">>
+Jacque: Oh well I'm sure, with how many hours you spend there. 
+Jacque: I expect business must be booming and everyone is wearing a scent by the house of Poodl. You know I am!
+<<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
+Pasha: Jacque, as always I am charmed. 
+Pasha: Though it looks like Cafe de Chartreux is doing just as good, I saw tons of new folk out front with your specialty latte drinks. 
 Pasha: Seems like your new ideas really bring life to the place. Your hospitality sure doesn't hurt either.
+<<changeNPCPortrait PortraitContainer "placeHolder_Jacque">>
 Jacque: Well it's nothing really, I just know what people like because it's what I like. 
+<<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
 Pasha: Yes, well it does seem to be an innate talent for you. 
-Pasha: A true people's person...
+Pasha: A true people's person…
+<<changeNPCPortrait PortraitContainer "placeHolder_Jacque">>
 Jacque: Aaaah. Too much, too much. My ego might fly away with how much you're inflating it.
 Jacque: What can I get your friend waiting at the table? 
-Jacque: Waaaaait, let me guess, café au lait? It seems to be the old man staple. 
+Jacque: [i]Waaaaait[/i], let me guess, café au lait? It seems to be the old man staple. 
+<<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
 Pasha: Yes, yes, your drink guessing skills are still phenomenal. One sugar on the side for him-
-Jacque: Two sugars for you and a bit of steamed oat milk on the side. 
+<<changeNPCPortrait PortraitContainer "placeHolder_Jacque">>
+Jacque: A double shot of espresso, two sugars for you and a bit of steamed oat milk on the side. 
 Jacque: I got it Pasha, don't worry.
-Pasha: [i]sigh[/i]
+<<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
+Pasha: [i]sigh[/i] 
+Pasha: Thank you Jacque.
 //Moves to the side.
 Pasha: Cafe de Chartreux has changed a lot since I first started coming here. Used to be an old rustic cafe on the corner, it still has that charm of course, but now they cater to the younger generation.
-Pasha: Enamored by the idea of a specialty drink instead of enjoying a plain espresso. 
+Pasha: They're all enamored by the idea of a specialty drink, but nothing beats a strong espresso.
 Pasha: Though I guess it isn't so bad, it gives Jacque some fuel for his passion and he is really good at what he does. 
 Pasha: Not even just the coffee part, talking to people. He does it all so effortlessly and everyone notices.
 Pasha: Even the customer before me wanted to hang out with him, just your local barista and his millionth side quest alongside his thriving work. 
+//break
+<<changeNPCPortrait PortraitContainer "placeHolder_Jacque">>
+Jacque: One espresso for you madam, and one cafe au lait for your friend.
+<<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
+Pasha: Thank you Jacque, stop by the shop sometime soon, I have some new scents for you to test for me.
+<<changeNPCPortrait PortraitContainer "placeHolder_Jacque">>
+Jacque: Oh anytime! I'll be free…
+Jacque: Hmm…
+Jacque: Not this Saturday, might have Francie's thing to go to…
+Jacque: Friday is a maybe, depending on how that class goes…
+Jacque: I can stop by on Monday? Right after my shift, I promise.
+<<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
+Pasha: Ha, okay perfect!
+//change to henri
+<<changeNPCPortrait PortraitContainer "placeHolder_Henri">>
+Henri: Who's the man you were talking to? Secret lover? Illicit affair?
+<<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
+Pasha: Henri! That is revolting, Jacque is way too young for me to even think like that. 
+Pasha: He's just a friend, I come here often and Jacque pulls the best espresso in the city.
+Pasha: Plus he's a regular of the perfumery.
+<<changeNPCPortrait PortraitContainer "placeHolder_Henri">>
+Henri: Aha ha. Well that's a good sign of a good person, if they enjoy your perfumes they must be.
+Henri: I am sorry. Just don't think I have ever seen you with someone in all my years of knowing you.
+Henri: Silly me for assuming like that.
+Henri: Hmm...
+===
+title: abstractionTwo
+position: 197,-250
+---
+Henri: Do you remember our last day together?
+Pasha: Yes, of course. That's the scent you meant, right? The one I made for you that day?
+Henri: Yes Pasha, but I don't want to talk about the perfume right now. That's all it is. Do you remember what we did that day?
+Pasha: I was trying to recall when I was making- Yes, I was thinking about the day earlier.
+Pasha: I remember you being insistent on spending time in the town, saying I wouldn't be back in the Cevennes for a while…
+Henri: And was I wrong?
+Pasha: No…but I got busy with everything here. You know after I graduated from the School of Briard everything went up.
+Henri: Ahaha. Well I am a good teacher dare I say. I remember that day like it was yesterday, we roamed the town like a bunch of rodents. No pied piper though. We were free to go wherever our hearts desired. 
+Henri: I personally loved going to the sweets store to get you bags of sweets to bring with you.
+Pasha: Ah the sweets store. You definitely packed way too many sweets, I'm sure I have bags of them somewhere in the shop still.
+Pasha: After the sweets shop we went down, past the river. I remember because I wanted the waters of the Cevennes to be encapsulated in the perfume.
+Henri: Indeed. We also walked through the gardens, every garden we saw. You wanted to smell the flowers for inspiration, you said. I however took a lovely stroll. 
+Henri: Birds chirped in the trees and I felt like I was a child in my mother's back garden once more. 
+Henri: Sometimes I still feel that way.
+Henri: The city feels like a playground.
+Pasha: Does it? I don't think I have ever thought of it that way.
+Henri: Well I think my memories of the city are a bit different than yours. You work and live here. I have never lived in a city like this.
+Pasha: Ah, the village is where you grew up and live now. I guess my feelings regarding the stone bridge could be different than yours.
+Henri: Ahaha. Do you have fond memories of that bridge? 
+Pasha: It's the entrance and exit to two very amazing times in my life. How could I not?
+Henri: Do you remember what you told me on that bridge before you left?
+Pasha: That I would need time before my business got up and running?
+Henri: No. You told me that you would become the best perfumer in the city of Paris. 
+Henri: What a bold claim from such a young lady like yourself, but I guess you have all the wisdom of a sage.
+Henri: You had such passion and drive, you still do. Maybe the fire burns too bright, Pasha, why do you doubt yourself now?
+Pasha: I forget, Henri… Some of my memories are muddy. I get frustrated. It's upsetting and it feels like if it doesn't go right then down goes Parfums de Poodl. 
+Pasha: I need everything to be perfect, otherwise what have I worked for? Everything I have built will just become a memory that fades in the wind.
+Pasha: Who will remember Parfums de Poodl once it leaves the street?
+Henri: ...
+Henri: Who will remember you?
+Henri: ...
+Henri: Pasha, will you remember me once I pass?
+Pasha: Henri. Of course I will.
+Henri: Do you remember our last stop on that day?
+Pasha: I went back to pack.
+Henri: Well yes, but I also poured us some late night coffees. Black and a couple of sugars.
+Henri: Reminded me of a long night workshopping with you, needing that burst of energy.
+Henri: I thought it couldn't hurt to do it a final time. 
+Henri: These memories last Pasha, someone will always be there to remember. Your barista friend Jacque, he will remember. I'm sure he tells all his customers about the stellar work of Parfums de Poodl and its owner.
+Henri: We cannot be hindered by the idea of legacy. Not when it starts to consume you whole.
 ===
