@@ -1,3 +1,5 @@
+using JetBrains.Annotations;
+using System.Diagnostics.Contracts;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -9,6 +11,8 @@ public class GameManager : MonoBehaviour
     public UnityEvent dialogTrigger;
 
     private bool startVisited = false;
+
+    public bool introDialogueRead = false;
 
     public void Update()
     {
@@ -25,14 +29,17 @@ public class GameManager : MonoBehaviour
             startVisited = true;
         }
 
-        if (Keyboard.current[Key.Escape].wasPressedThisFrame)
+        if (Keyboard.current[Key.Escape].wasPressedThisFrame && introDialogueRead == false)
         {
             dialogTrigger.Invoke();
+            introDialogueRead = true;
         }
     }
 
     private void Start()
     {
+        introDialogueRead = false;
+        
         if (startVisited == true)
         {
             letterGroup.SetActive(false);
