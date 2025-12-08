@@ -3,6 +3,8 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class PlacementReader : MonoBehaviour, IGameStateManager
 {
@@ -17,19 +19,15 @@ public class PlacementReader : MonoBehaviour, IGameStateManager
 
     public GameObject[] pPlacementGroups;
     public int correctPlacedPiecesCount = 0;
-    public TMP_Text pieceCountText;
-    public TMP_Text solvedText;
 
     PlacementManager placementManagerScript;
-    //public bool placedTL;
-    //public bool placedTR;
-    //public bool placedBL;
-    //public bool placedBR;
 
     public bool solvedPuzzle1 = false;
     public int correctPlacementCountup = 0;
     public camControl camControlScript;
 
+    public UnityEvent winEvent = new UnityEvent();
+    public GameObject winCanvas;
 
     public void Awake()
     {
@@ -44,42 +42,27 @@ public class PlacementReader : MonoBehaviour, IGameStateManager
         }
     }
 
+    void Start()
+    {
+        winEvent.AddListener(solveTest);
+        solvedPuzzle1 = false;
+    }
+
     public void Update()
     {
-        //placedPiecesCount = pPlacementGroups.transform.childCount;
-
-        /*if (correctPlacedPiecesCount == 4)
-        {
-            solvedPuzzle1 = true;
-        }
-
-        if (solvedPuzzle1 == true)
-        {
-            solvedText.text = "Puzzle 1 solved!";
-            StartCoroutine(Timer(2));
-            PuzzleOnSolve();
-
-        }
-        else if (solvedPuzzle1 == false)
-        {
-            solvedText.text = "Puzzle 1 not solved yet...";
-            //PlacementReading();
-        }*/
-
+        
     }
 
     public void CorrectPlacementCounter()
     {
         Debug.Log("CorrectPlacementCounter called");
         
-
-
         if (pPlacementGroups[0].GetComponent<PlacementManager>().correctPiecePlaced == true &&
             pPlacementGroups[1].GetComponent<PlacementManager>().correctPiecePlaced == true &&
             pPlacementGroups[2].GetComponent<PlacementManager>().correctPiecePlaced == true &&
             pPlacementGroups[3].GetComponent<PlacementManager>().correctPiecePlaced == true)
         {
-            PuzzleOnSolve();
+            PuzzleSolveTrigger();
         }
         else if(pPlacementGroups[0].GetComponent<PlacementManager>().correctPiecePlaced == true ||
             pPlacementGroups[1].GetComponent<PlacementManager>().correctPiecePlaced == true ||
@@ -93,60 +76,55 @@ public class PlacementReader : MonoBehaviour, IGameStateManager
         {
             Debug.Log("Puzzle not solved yet.");
         }
-
-        /*int correctPlacementCountup = 0;
-        int currentSlot = 0;
-
-        for (int i = 0; i < 3; i++)
-        {
-            if (i == currentSlot)
-            {
-                if (pPlacementGroups[currentSlot].GetComponent<PlacementManager>().correctPiecePlaced == true)
-                {
-                    correctPlacementCountup++;
-                    currentSlot++;
-                    Debug.Log("Counting");
-                }
-            }
-        }
-        if (correctPlacementCountup == 4)
-        {
-            Debug.Log("(PlacementReader) Counted placementCountup " + correctPlacementCountup);
-            Debug.Log("(PlacementReader) Counted currentslot " + currentSlot);
-            PuzzleOnSolve();
-        }*/
-
     }
 
 
-    public void PuzzleOnSolve()
+    public void PuzzleSolveTrigger()
     {
         StartCoroutine(Timer());
 
         // sfx for puzzle solve feedback
 
+        solvedPuzzle1 = true;
         Debug.Log("Puzzle 1 solved.");
+        PuzzleSolveFeedback();
+    }
 
+    public void solveTest()
+    {
+        Debug.Log("Event functions, do the solve logic");
+    }
+
+    public void PuzzleSolveFeedback()
+    {
         // go back to main screen with "solved"
 
         StartCoroutine(Timer());
-        //camControlScript.GetStateString("Complete");
+        
 
         // return to perfumery
-        Debug.Log("Finished puzzle");
-        SceneManager.LoadScene(3);
 
-    }
+        // logic for moving back to the other canvas/"zooming out"
+        // i think we'd also 
+        //camControlScript.GetStateString("Complete");
+        winCanvas.SetActive(true);
 
-    public void GetState(gameState state)
-    {
-        throw new System.NotImplementedException();
+        if (solvedPuzzle1 == true && winCanvas.activeInHierarchy == true)
+        {
+            Debug.Log("Got to line where we'd read mouse input");
+            if (Mouse.current.leftButton.wasPressedThisFrame)
+            {
+                
+                SceneManager.LoadScene(3);
+            }
+        }
     }
 
     private IEnumerator Timer()
     {
         while (true)
         {
+            Debug.Log("This PlacementReader timer");
             Debug.Log("0");
             yield return new WaitForSeconds(1);
             Debug.Log("1");
@@ -156,6 +134,11 @@ public class PlacementReader : MonoBehaviour, IGameStateManager
             Debug.Log("3");
             break;
         }
+    }
+
+    public void GetState(gameState state)
+    {
+        throw new System.NotImplementedException();
     }
 
 }

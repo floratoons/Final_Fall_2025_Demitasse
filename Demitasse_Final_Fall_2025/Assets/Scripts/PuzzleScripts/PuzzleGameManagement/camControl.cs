@@ -9,6 +9,8 @@ using System.Collections;
 
 public class camControl : MonoBehaviour, IGameStateManager
 {
+    public static PlacementReader Instance { get; private set; }
+
     public CinemachineCamera cam;
     public int priority;
     public int camID;

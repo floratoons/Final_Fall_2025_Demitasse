@@ -6,18 +6,18 @@ using System;
 
 public class StateController : MonoBehaviour
 {
-    public static StateController instance { get; private set; }
+    public static StateController Instance { get; private set; }
 
     public gameState gState;
     public List<IGameStateManager> gStateObjs;
 
     public void Awake()
     {
-        if (instance != null)
+        if (Instance != null)
         {
             Debug.LogError("There is already an instance of the StateController in this scene. Removing duplicate instance.");
         }
-        instance = this;
+        Instance = this;
 
         gState = new gameState();
     }

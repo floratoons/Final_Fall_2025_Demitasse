@@ -28,7 +28,7 @@ public class PlacementManager : MonoBehaviour, IDropHandler
     void Awake()
     {
         dragDropManagerScript = GetComponent<DragDropManager>();
-        //here
+
         placementReaderScript = PlacementReader.Instance;
     }
 
@@ -60,11 +60,13 @@ public class PlacementManager : MonoBehaviour, IDropHandler
 
         if (droppedItem.currentPiece.pieceName == placementGoalPiece)
         {
+            StartCoroutine(Timer());
             Debug.Log("Correct piece placed");
             correctPiecePlaced = true;
         }
         else
         {
+            StartCoroutine(Timer());
             Debug.Log("Incorrect placement");
             correctPiecePlaced = false;
 
@@ -112,13 +114,10 @@ public class PlacementManager : MonoBehaviour, IDropHandler
     {
         while (true)
         {
+            Debug.Log("This PlacementManager timer");
             Debug.Log("0");
             yield return new WaitForSeconds(1);
             Debug.Log("1");
-            yield return new WaitForSeconds(1);
-            Debug.Log("2");
-            yield return new WaitForSeconds(1);
-            Debug.Log("3");
             yield return new WaitForSeconds(1);
             break;
         }
