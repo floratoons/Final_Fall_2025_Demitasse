@@ -3,12 +3,14 @@ using NUnit.Framework;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using Unity.Cinemachine;
-using UnityEditorInternal;
+//using UnityEditorInternal;
 using UnityEngine;
 using System.Collections;
 
 public class camControl : MonoBehaviour, IGameStateManager
 {
+    public static PlacementReader Instance { get; private set; }
+
     public CinemachineCamera cam;
     public int priority;
     public int camID;
@@ -38,6 +40,9 @@ public class camControl : MonoBehaviour, IGameStateManager
                 break;
             case "Puzzle3":
                 puzzleCamSwitch(3);
+                break;
+            case "Complete":
+                puzzleCamSwitch(0);
                 break;
         }
     }

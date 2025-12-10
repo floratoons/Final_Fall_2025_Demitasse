@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eeb2efd50f13844e85c7386435fbdda, type: 3}
+  m_Name: d_TR
+  m_EditorClassIdentifier: Assembly-CSharp::PPiece
+  pieceName: d_TL
+  goalPlacement: {fileID: 935341047749719087, guid: 435c2079884afd54d84ce1a9483edbba, type: 3}
+  icon: {fileID: 2028799153, guid: 6fbed05607935a048a9bbe35475af4f5, type: 3}
+  cursorIcon: {fileID: 2800000, guid: da9bd6f8e5fc40d4bba992b0d4511611, type: 3}
+  rightPiece: 1

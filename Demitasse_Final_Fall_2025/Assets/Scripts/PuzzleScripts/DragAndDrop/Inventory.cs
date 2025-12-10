@@ -1,21 +1,20 @@
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
-public class Inventory : MonoBehaviour, IDropHandler
+public class Inventory : MonoBehaviour
 {
-    public int inventorySize;
+    public bool placedRightPiece = false;
+    public string goalPiece = "";
 
-    public void OnDrop(PointerEventData eventData)
-    {
-        Debug.Log("Dropped Item");
-        GameObject droppedItem = eventData.pointerDrag;
+    private PPiece pPieceDataSource;
 
-        if (transform.childCount < inventorySize)
-        {
-            droppedItem.GetComponent<ItemInfo>().lastPosition = transform;
-        }
+    public GameObject placedPiece;
 
-    }
 
 }
+
+
 

@@ -1,21 +1,140 @@
+using TMPro;
 using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+using UnityEditor;
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
-public class PlacementReader : MonoBehaviour
+public class PlacementReader : MonoBehaviour, IGameStateManager
 {
-    
-    // here we need to:
+    public static PlacementReader Instance { get; private set; }
 
-    // get the stats on the puzzlepiece scriptable objs
-    // when a piece is placed,
-    // register whether the piece is in its right place
+    // ------------------------
 
-    // if it is:
-    // make it not a raycast target (?)
-    // register that 1/4 pieces is placed right
-    // tell gamemanager 1/4 to puzzle complete
-    // take that piece off the list of items to spawn
+    // temporary version:
+    // get the PPlacementGroup and keep track of how many children,
+    // change counter based on amount,
+    // do an event when the puzzle is solved
 
-    // if it isn't:
-    // let it snap back to its place on the PItemGroup
+    public GameObject[] pPlacementGroups;
+    public int correctPlacedPiecesCount = 0;
+
+    PlacementManager placementManagerScript;
+
+    public bool solvedPuzzle1 = false;
+    public int correctPlacementCountup = 0;
+    public camControl camControlScript;
+
+    public UnityEvent winEvent = new UnityEvent();
+    public GameObject winCanvas;
+
+    public void Awake()
+    {
+        if(Instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void Start()
+    {
+        winEvent.AddListener(solveTest);
+        solvedPuzzle1 = false;
+    }
+
+    public void Update()
+    {
+        
+    }
+
+    public void CorrectPlacementCounter()
+    {
+        Debug.Log("CorrectPlacementCounter called");
+        
+        if (pPlacementGroups[0].GetComponent<PlacementManager>().correctPiecePlaced == true &&
+            pPlacementGroups[1].GetComponent<PlacementManager>().correctPiecePlaced == true &&
+            pPlacementGroups[2].GetComponent<PlacementManager>().correctPiecePlaced == true &&
+            pPlacementGroups[3].GetComponent<PlacementManager>().correctPiecePlaced == true)
+        {
+            PuzzleSolveTrigger();
+        }
+        else if(pPlacementGroups[0].GetComponent<PlacementManager>().correctPiecePlaced == true ||
+            pPlacementGroups[1].GetComponent<PlacementManager>().correctPiecePlaced == true ||
+            pPlacementGroups[2].GetComponent<PlacementManager>().correctPiecePlaced == true ||
+            pPlacementGroups[3].GetComponent<PlacementManager>().correctPiecePlaced == true)
+        {
+            correctPlacementCountup++;
+            Debug.Log("Some correct placements");
+        }
+        else
+        {
+            Debug.Log("Puzzle not solved yet.");
+        }
+    }
+
+
+    public void PuzzleSolveTrigger()
+    {
+        StartCoroutine(Timer());
+
+        // sfx for puzzle solve feedback
+
+        solvedPuzzle1 = true;
+        Debug.Log("Puzzle 1 solved.");
+        PuzzleSolveFeedback();
+    }
+
+    public void solveTest()
+    {
+        Debug.Log("Event functions, do the solve logic");
+    }
+
+    public void PuzzleSolveFeedback()
+    {
+        // go back to main screen with "solved"
+
+        StartCoroutine(Timer());
+        
+
+        // return to perfumery
+
+        // logic for moving back to the other canvas/"zooming out"
+        // i think we'd also 
+        //camControlScript.GetStateString("Complete");
+        winCanvas.SetActive(true);
+
+        if (solvedPuzzle1 == true && winCanvas.activeInHierarchy == true)
+        {
+            Debug.Log("Got to line where we'd read mouse input");
+            SceneManager.LoadScene(3);
+        }
+    }
+
+    private IEnumerator Timer()
+    {
+        while (true)
+        {
+            Debug.Log("This PlacementReader timer");
+            Debug.Log("0");
+            yield return new WaitForSeconds(1);
+            Debug.Log("1");
+            yield return new WaitForSeconds(1);
+            Debug.Log("2");
+            yield return new WaitForSeconds(1);
+            Debug.Log("3");
+            break;
+        }
+    }
+
+    public void GetState(gameState state)
+    {
+        throw new System.NotImplementedException();
+    }
 
 }

@@ -52,39 +52,34 @@ public class puzzlePieceSpawner : MonoBehaviour, IGameStateManager
                 //StartCoroutine(CountToPieceSpawn());
                 // spawn logic
 
-                // temporary key to spawn puzzle pieces
-                if (Keyboard.current[Key.O].wasPressedThisFrame)
+                // temporary button to spawn puzzle pieces
+                Debug.Log("Piece spawner clicked");
+
+                for (int i = 0; i < itemGroupContainer.transform.childCount; i++)
                 {
-                    Debug.Log("Piece spawner clicked");
-
-                    for (int i = 0; i < itemGroupContainer.transform.childCount; i++)
-                    {
-                        Destroy(itemGroupContainer.transform.GetChild(i).gameObject);
-                    }
-
-                    for (int i = 0; i < itemSize; i++)
-                    {
-                        // creating a new gameobj in the scene
-                        // selecting random piece from the list within the list of scriptable obj data
-
-                        var randomItem = new GameObject();
-                        var itemIcon = randomItem.AddComponent<Image>();
-                        var itemData = randomItem.AddComponent<ItemInfo>();
-
-                        // add a button and listener to the button calling 'lootClick' function in the lootData class 
-                        var randomItemBtn = randomItem.AddComponent<Button>();
-                        randomItemBtn.onClick.AddListener(itemData.itemClick);
-
-                        // assigning the randomly selected piece from the scripobj to the new gameobj
-                        randomItem.GetComponent<ItemInfo>().currentPiece = allItems[Random.Range(0, allItems.Count)];
-                        itemIcon.sprite = itemData.currentPiece.icon;
-
-                        // assign the item to the PPlacementGroup
-                        randomItem.transform.SetParent(itemGroupContainer.transform);
-                    }
+                    Destroy(itemGroupContainer.transform.GetChild(i).gameObject);
                 }
 
-                
+                for (int i = 0; i < itemSize; i++)
+                {
+                    // creating a new gameobj in the scene
+                    // selecting random piece from the list within the list of scriptable obj data
+
+                    var randomItem = new GameObject();
+                    var itemIcon = randomItem.AddComponent<Image>();
+                    var itemData = randomItem.AddComponent<DragDropManager>();
+
+                    // add a button and listener to the button calling 'lootClick' function in the lootData class 
+                    var randomItemBtn = randomItem.AddComponent<Button>();
+                    randomItemBtn.onClick.AddListener(itemData.itemClick);
+
+                    // assigning the randomly selected piece from the scripobj to the new gameobj
+                    randomItem.GetComponent<DragDropManager>().currentPiece = allItems[Random.Range(0, allItems.Count)];
+                    itemIcon.sprite = itemData.currentPiece.icon;
+
+                    // assign the item to the PPlacementGroup
+                    randomItem.transform.SetParent(itemGroupContainer.transform);
+                }
             }
         }
     }

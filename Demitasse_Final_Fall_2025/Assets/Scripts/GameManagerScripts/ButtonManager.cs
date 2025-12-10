@@ -1,10 +1,29 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
+    public Button button;
+    public int buttonClicks;
+
     public void startGame()
     {
-        SceneManager.LoadScene("Overworld_1");
+        SceneManager.LoadScene(1);
+    }
+
+    public void clickOnce()
+    {
+        button.interactable = false;
+    }
+
+    public void clickCount()
+    {
+        buttonClicks++;
+
+        if(buttonClicks == 1)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 }

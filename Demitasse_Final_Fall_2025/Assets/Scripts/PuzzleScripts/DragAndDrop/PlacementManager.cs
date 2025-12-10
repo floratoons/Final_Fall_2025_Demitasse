@@ -1,29 +1,132 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using System.Collections;
+//using UnityEditor.Experimental.GraphView;
+//using Unity.VisualScripting;
 
 public class PlacementManager : MonoBehaviour, IDropHandler
 {
     public GameObject placementGroup;
 
-    public placement saleInteraction;
+    public placement doThePlacement;
+
+    public PPiece pPieceDataSource_;
+
+    public string droppedPieceName;
+
+    public bool correctPiecePlaced = false;
+
+    public string placementGoalPiece = "";
+
+    public DragDropManager dragDropManagerScript;
+    private PlacementReader placementReaderScript;
+
+
+    public int slotID;
+
+    void Awake()
+    {
+        dragDropManagerScript = GetComponent<DragDropManager>();
+
+        placementReaderScript = PlacementReader.Instance;
+    }
 
     public void OnDrop(PointerEventData eventData)
     {
+        //
         GameObject droppedObj = eventData.pointerDrag;
-        ItemInfo droppedItem = droppedObj.GetComponent<ItemInfo>();
+        Debug.Log("Dropped Item");
+
+        if (transform.childCount < 1)
+        {
+            droppedObj.GetComponent<DragDropManager>().lastPosition = transform;
+        }
+
+        //
+        DragDropManager droppedItem = droppedObj.GetComponent<DragDropManager>();
 
         //placementGroup.GetComponent<WalletManager>().calcCash(droppedItem.currentPiece.cost);
-        //saleInteraction.Invoke(droppedItem.currentPiece.cost);
+        //doThePlacement.Invoke(droppedItem.currentPiece.cost);
 
         // talk to placementreader script to do logic for placed object?
 
-        saleInteraction.Invoke(droppedItem.currentPiece);
+        //doThePlacement.Invoke(droppedItem.currentPiece);
 
-        Destroy(droppedObj);
+        doThePlacement.Invoke(droppedItem.currentPiece.pieceName);
+        Debug.Log("Got " + droppedItem.currentPiece.pieceName);
+
+        droppedPieceName = droppedItem.currentPiece.pieceName;
+
+        if (droppedItem.currentPiece.pieceName == placementGoalPiece)
+        {
+            StartCoroutine(Timer());
+            Debug.Log("Correct piece placed");
+            correctPiecePlaced = true;
+        }
+        else
+        {
+            StartCoroutine(Timer());
+            Debug.Log("Incorrect placement");
+            correctPiecePlaced = false;
+
+            //StartCoroutine (Timer(4, droppedObj));
+        }
+
+        CheckPlacement();
+    }
+
+    void CheckPlacement()
+    {
+        StartCoroutine(Timer());
+        Debug.Log("CheckPlacement ran");
+        PlacementReader.Instance.CorrectPlacementCounter();
+
+        /*if (correctPiecePlaced == true)
+        {
+            PlacementReader.Instance.PuzzleOnSolve();
+        }
+        else
+        {
+            Debug.Log("Checked placement, didn't run PuzzleOnSolve");
+        }*/
+    }
+
+    /*private IEnumerator Timer(int time, GameObject droppedObj_)
+    {
+        while (true)
+        {
+            if (droppedObj_ == isActiveAndEnabled)
+            {
+                yield return new WaitForSeconds(time);
+                Destroy(droppedObj_);
+                dragDropManagerScript.whileDragging = false;
+                Debug.Log("Destroyed incorrect placed piece");
+            }
+            else
+            {
+                break;
+            }
+        }
+    }*/
+
+    private IEnumerator Timer()
+    {
+        while (true)
+        {
+            Debug.Log("This PlacementManager timer");
+            Debug.Log("0");
+            yield return new WaitForSeconds(1);
+            Debug.Log("1");
+            yield return new WaitForSeconds(1);
+            break;
+        }
     }
 }
 
+
+
 [System.Serializable]
-public class placement : UnityEvent<bool>
+public class placement : UnityEvent<string>
 { }
+

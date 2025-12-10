@@ -6,18 +6,18 @@ using System;
 
 public class StateController : MonoBehaviour
 {
-    public static StateController instance { get; private set; }
+    public static StateController Instance { get; private set; }
 
     public gameState gState;
     public List<IGameStateManager> gStateObjs;
 
     public void Awake()
     {
-        if (instance != null)
+        if (Instance != null)
         {
             Debug.LogError("There is already an instance of the StateController in this scene. Removing duplicate instance.");
         }
-        instance = this;
+        Instance = this;
 
         gState = new gameState();
     }
@@ -34,6 +34,9 @@ public class StateController : MonoBehaviour
             case "Menu":
                 gState.state = gameState.STATE.MENU;
                 break;
+            case "Talking":
+                gState.state = gameState.STATE.TALKING;
+                break;
             case "Puzzle1":
                 gState.state = gameState.STATE.PUZZLE1;
                 break;
@@ -42,6 +45,9 @@ public class StateController : MonoBehaviour
                 break;
             case "Puzzle3":
                 gState.state = gameState.STATE.PUZZLE3;
+                break;
+            case "Complete":
+                gState.state = gameState.STATE.COMPLETE;
                 break;
         }
         Debug.Log("The current gameState is " + gState.state);
