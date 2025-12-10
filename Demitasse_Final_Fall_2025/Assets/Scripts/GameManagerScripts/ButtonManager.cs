@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class ButtonManager : MonoBehaviour
 {
     public Button button;
+    public int buttonClicks;
+
     public void startGame()
     {
         SceneManager.LoadScene(1);
@@ -13,5 +15,15 @@ public class ButtonManager : MonoBehaviour
     public void clickOnce()
     {
         button.interactable = false;
+    }
+
+    public void clickCount()
+    {
+        buttonClicks++;
+
+        if(buttonClicks == 1)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 }
