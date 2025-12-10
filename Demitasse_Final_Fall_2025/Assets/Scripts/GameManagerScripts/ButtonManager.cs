@@ -21,7 +21,7 @@ public class ButtonManager : MonoBehaviour
     {
         buttonClicks++;
 
-        if(buttonClicks == 1)
+        if(buttonClicks > 1)
         {
             SceneManager.LoadScene(2);
         }
