@@ -12,7 +12,7 @@ public class TutorialEnd : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().buildIndex == 5)
         {
-            SceneManager.LoadScene(0);
+            //SceneManager.LoadScene(0);
         }
         else if (SceneManager.GetActiveScene().buildIndex == 4)
         {

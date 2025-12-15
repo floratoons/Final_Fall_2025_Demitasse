@@ -59,7 +59,7 @@ Henri: You say “way back when” but all that does is make me feel old and que
 Henri: [i]*Ahhck hck-hck*[/i]
 Henri: Ahhck Sorry sorry I am coughing up a lung.
 Henri: Oh Pasha this is darling. It's scrap fabric from the old textiles shop down the road? 
-Henri: You know Mrs. Denise still runs it? Her grandkids help her from time to time, but she still weaves and mends for everyone and their mother.
+Henri: You know Mrs. Denise still runs it? Her grandkids help her from time to time, but she still weaves and mends for everyone and their mother. Bwahaha!
 //TRIGGER FX
 Henri: [i]*Psshhhhh*[/i]
 Henri: [i]*Sniff sniff*[/i]
@@ -137,7 +137,8 @@ Jacque: I got it Pasha, don't worry.
 Pasha: [i]sigh[/i] 
 Pasha: Thank you Jacque.
 //Moves to the side.
-Pasha: Cafe de Chartreux has changed a lot since I first started coming here. Used to be an old rustic cafe on the corner, it still has that charm of course, but now they cater to the younger generation.
+Pasha: Cafe de Chartreux has changed a lot since I first started coming here. 
+Pasha: Used to be an old rustic cafe on the corner, it still has that charm of course, but now they cater to the younger generation.
 Pasha: They're all enamored by the idea of a specialty drink, but nothing beats a strong espresso.
 Pasha: Though I guess it isn't so bad, it gives Jacque some fuel for his passion and he is really good at what he does. 
 Pasha: Not even just the coffee part, talking to people. He does it all so effortlessly and everyone notices.
@@ -169,6 +170,7 @@ Henri: Silly me for assuming like that.
 Henri: Hmm...
 //zoom in
 <<LoadDemitasseZoom "Demitasse_Anim">>
+//<<LoadScene "5_Puzzle">>
 ===
 title: abstractionTwo
 position: 197,-250
@@ -180,11 +182,13 @@ Pasha: I was trying to recall when I was making- Yes, I was thinking about the d
 Pasha: I remember you being insistent on spending time in the town, saying I wouldn't be back in the Cevennes for a while…
 Henri: And was I wrong?
 Pasha: No…but I got busy with everything here. You know after I graduated from the School of Briard everything went up.
-Henri: Ahaha. Well I am a good teacher dare I say. I remember that day like it was yesterday, we roamed the town like a bunch of rodents. No pied piper though. We were free to go wherever our hearts desired. 
+Henri: Ahaha. Well I am a good teacher dare I say. I remember that day like it was yesterday, we roamed the town like a bunch of rodents. 
+Henri: No pied piper though. We were free to go wherever our hearts desired. 
 Henri: I personally loved going to the sweets store to get you bags of sweets to bring with you.
 Pasha: Ah the sweets store. You definitely packed way too many sweets, I'm sure I have bags of them somewhere in the shop still.
 Pasha: After the sweets shop we went down, past the river. I remember because I wanted the waters of the Cevennes to be encapsulated in the perfume.
-Henri: Indeed. We also walked through the gardens, every garden we saw. You wanted to smell the flowers for inspiration, you said. I however took a lovely stroll. 
+Henri: Indeed. We also walked through the gardens, every garden we saw. 
+Henri: You wanted to smell the flowers for inspiration, you said. I however took a lovely stroll. 
 Henri: Birds chirped in the trees and I felt like I was a child in my mother's back garden once more. 
 Henri: Sometimes I still feel that way.
 Henri: The city feels like a playground.
@@ -198,7 +202,8 @@ Pasha: That I would need time before my business got up and running?
 Henri: No. You told me that you would become the best perfumer in the city of Paris. 
 Henri: What a bold claim from such a young lady like yourself, but I guess you have all the wisdom of a sage.
 Henri: You had such passion and drive, you still do. Maybe the fire burns too bright, Pasha, why do you doubt yourself now?
-Pasha: I forget, Henri… Some of my memories are muddy. I get frustrated. It's upsetting and it feels like if it doesn't go right then down goes Parfums de Poodl. 
+Pasha: I forget, Henri… Some of my memories are muddy. I get frustrated. 
+Pasha: It's upsetting, and it feels like if it doesn't go right - then down goes Parfums de Poodl. 
 Pasha: I need everything to be perfect, otherwise what have I worked for? Everything I have built will just become a memory that fades in the wind.
 Pasha: Who will remember Parfums de Poodl once it leaves the street?
 Henri: ...
@@ -211,16 +216,26 @@ Pasha: I went back to pack.
 Henri: Well yes, but I also poured us some late night coffees. Black and a couple of sugars.
 Henri: Reminded me of a long night workshopping with you, needing that burst of energy.
 Henri: I thought it couldn't hurt to do it a final time. 
-Henri: These memories last Pasha, someone will always be there to remember. Your barista friend Jacque, he will remember. I'm sure he tells all his customers about the stellar work of Parfums de Poodl and its owner.
+Henri: ...
+Henri: These memories last Pasha, someone will always be there to remember. 
+Henri: The friends you've made, new and old. The dear folks who adore you all around the streets of Paris!
+Henri: Your barista friend Jacque, he will remember. I'm sure he tells all his customers about the stellar work of Parfums de Poodl and its owner.
 Henri: We cannot be hindered by the idea of legacy. Not when it starts to consume you whole.
+Game: CURRENT END. Return to start?
+    -> Yes
+        Thank you for playing!
+        <<LoadScene "0_MainMenu">>
+    -> No
+        Thank you for playing!
 ===
 title: Letter
 ---
-Pasha: [i]I'm glad he wrote to me, it's been a few years since I last saw him...his hand is not as steady as it used to be.[/i]
+Pasha: [i]I'm glad he wrote to me,[/i]
+Pasha: [i]It's been a few years since I last saw him...his hand is not as steady as it used to be.[/i]
 ===
 title: OpenBook
 ---
-Pasha: Hmm..[i]This recipe book might have some things that can help...[/i]
+Pasha: Hmm.. [i]This recipe book might have some things that can help...[/i]
 ===
 title: ClosedBooks
 ---
@@ -229,27 +244,38 @@ Pasha: [i]They're better off as dust collectors anyway.[/i]
 ===
 title: WrappedOrder
 ---
-Pasha: I have to finish up these orders soon…Marie is coming in two days, is Lola coming with her?
+Pasha: [i]I have to finish up these orders soon… Marie is coming in two days, is Lola coming with her?[/i]
 ===
 title: IngredientJars
 ---
-Pasha: [i]A tedious process trying to extract my own oils from these... some would rather just buy the oils and mix them into alcohol then and there, but there is something relaxing about doing it all from the beginning. [/i]
+Pasha: [i]A tedious process trying to extract my own oils from these...[/i]
+Pasha: [i]Some would rather just buy the oils and mix them into alcohol then and there,[/i]
+Pasha: [i]-but there is something relaxing about doing it all from the beginning. [/i]
 ===
 title: Counter
 ---
-Pasha: This building used to be empty for a while until I bought it...
-Pasha: I heard from the neighbors that the neighborhood wasn't doing the best...
+Pasha: [i]This building used to be empty for a while until I bought it...[/i]
+Pasha: [i]I heard from the neighbors that the neighborhood wasn't doing the best...[/i]
 ===
 title: Chair
 ---
-BLANK
+Pasha: [i]Ah, my grandmother's armchair I inherited. It's a lovely piece.[/i]
+Pasha: [i]It has definitely stood the test of time, the fabric has faded.[/i]
+Pasha: [i]I should consider reupholstering it.[/i]
+Pasha: [i]No.. I shouldn't.. she would roll over in her grave if I did. Ha.[/i]
 ===
 title: Ladder
 ---
-BLANK
+Pasha: [i]I just love functional furniture, I'm so happy this ladder is finally installed.[/i]
 ===
 title: Chandelier
 ---
-Pasha: [i]Personal routine is so important. My favorite might just be turning on the lights in the mornings before anyone comes in...[/i]
+Pasha: [i]Personal routine is so important.[/i] 
+Pasha: [i]My favorite might just be turning on the lights in the mornings before anyone comes in...[/i]
 Pasha: [i]There's peace when the sun breaks through the windows...[/i]
+===
+title: Croissant
+---
+Pasha: [i]Cafe de Chartreux has the excellent croissants. I should stop by tomorrow to get a coffee.[/i]
+Pasha: [i]I think Jacque works tomorrow? Noboby makes an espresso like he does.[/i]
 ===

@@ -18,11 +18,18 @@ public class GameManager : MonoBehaviour
     public GameObject cameraToAdjust;
     public bool camMovementLock;
 
+    public ButtonManager buttonManagerScript;
+    public GameObject buttonCounterObject;
+
+    public GameObject investigationInstructions;
+
     private void Start()
     {
         introDialogueStarted = false;
         camMovementLock = true;
-        
+
+        investigationInstructions.SetActive(false);
+
         if (startVisited == true)
         {
             letterGroup.SetActive(false);
@@ -33,16 +40,18 @@ public class GameManager : MonoBehaviour
         {
             cameraToAdjust.GetComponent<CinemachineInputAxisController>().enabled = false;
         }
+
+        buttonManagerScript = buttonCounterObject.GetComponent<ButtonManager>();
     }
 
     public void Update()
     {
         // temporary key to move to the puzzle scene
-        if (Keyboard.current[Key.P].wasPressedThisFrame)
+        /*if (Keyboard.current[Key.P].wasPressedThisFrame)
         {
             SceneManager.LoadScene(2);
             Debug.Log("P button clicked");
-        }
+        }*/
 
         if (Keyboard.current[Key.Escape].wasPressedThisFrame)
         {
@@ -64,6 +73,17 @@ public class GameManager : MonoBehaviour
     public void cameraUnlock()
     {
         Debug.Log("Would be starting the investigation");
+
         cameraToAdjust.GetComponent<CinemachineInputAxisController>().enabled = true;
+        
+        if(buttonManagerScript.buttonClicks == 0)
+        {
+            investigationInstructions.SetActive(true);
+        }
+        else if(buttonManagerScript.buttonClicks > 0)
+        {
+            investigationInstructions.SetActive(false);
+        }
+            
     }
 }

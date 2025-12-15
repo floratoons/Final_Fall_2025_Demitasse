@@ -22,7 +22,7 @@ EditorBuildSettings:
     guid: e908a80a514df7d41ae60633c6db31b6
   - enabled: 1
     path: Assets/Scenes/5_Puzzle.unity
-    guid: e662f811f89d94b4ba70b141f2d6efd2
+    guid: 9a14718d376e0e546aa5376855da94aa
   - enabled: 1
     path: Assets/Scenes/6_Overworld_Conclusion.unity
     guid: 1ad99ba761e88594cb9f79c081866273
