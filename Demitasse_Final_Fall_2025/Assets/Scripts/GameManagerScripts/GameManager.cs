@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,10 +24,32 @@ public class GameManager : MonoBehaviour
 
     public GameObject investigationInstructions;
 
+    public Button chairButton;
+    public Button chandelierButton;
+    public Button closeBooksButton;
+    public Button ingredientJarsButton;
+    public Button ladderButton;
+    public Button openBookButton;
+    public Button counterButton;
+    public Button wrappedOrderButton;
+    public Button croissantButton;
+    public Button letterButton;
+
     private void Start()
     {
         introDialogueStarted = false;
         camMovementLock = true;
+
+        chairButton.interactable = false;
+        chandelierButton.interactable = false;
+        closeBooksButton.interactable = false;
+        ingredientJarsButton.interactable = false;
+        ladderButton.interactable = false;
+        openBookButton.interactable = false;
+        counterButton.interactable = false;
+        wrappedOrderButton.interactable = false;
+        croissantButton.interactable = false;
+        letterButton.interactable = false;
 
         investigationInstructions.SetActive(false);
 
@@ -75,7 +98,19 @@ public class GameManager : MonoBehaviour
         Debug.Log("Would be starting the investigation");
 
         cameraToAdjust.GetComponent<CinemachineInputAxisController>().enabled = true;
-        
+
+        chairButton.interactable = true;
+        chandelierButton.interactable = true;
+        closeBooksButton.interactable = true;
+        ingredientJarsButton.interactable = true;
+        ladderButton.interactable = true;
+        openBookButton.interactable = true;
+        counterButton.interactable = true;
+        wrappedOrderButton.interactable = true;
+        croissantButton.interactable = true;
+        letterButton.interactable = true;
+
+
         if(buttonManagerScript.buttonClicks == 0)
         {
             investigationInstructions.SetActive(true);

@@ -8,6 +8,8 @@ TagManager:
   - Puzzle1
   - Puzzle2
   - Puzzle3
+  - CinemachineTarget
+  - PerfumeryButtons
   layers:
   - Default
   - TransparentFX

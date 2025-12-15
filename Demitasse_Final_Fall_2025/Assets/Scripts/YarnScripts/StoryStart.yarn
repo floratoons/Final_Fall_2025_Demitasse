@@ -55,11 +55,13 @@ Pasha: No no, I made the scent for you. Let me just grab it after I'm finished w
 Pasha: [i]Oui, merci Lola. Au revoir bonne journée.[/i]
 Pasha: Henri, come come, I wrapped it up in this old piece of fabric I still had from way back when.
 <<changeNPCPortrait PortraitContainer "placeHolder_Henri">>
-Henri: You say “way back when” but all that does is make me feel old and question what the Paris air does to your youth. Bwahahahack hck-hck! 
+Henri: You say “way back when”...
+Henri: All that does is make me feel old and question what the Paris air does to your youth. Bwahahahack hck-hck! 
 Henri: [i]*Ahhck hck-hck*[/i]
 Henri: Ahhck Sorry sorry I am coughing up a lung.
 Henri: Oh Pasha this is darling. It's scrap fabric from the old textiles shop down the road? 
-Henri: You know Mrs. Denise still runs it? Her grandkids help her from time to time, but she still weaves and mends for everyone and their mother. Bwahaha!
+Henri: You know Mrs. Denise still runs it? 
+Henri: Her grandkids help her from time to time, but she still weaves and mends for everyone and their mother. Bwahaha!
 //TRIGGER FX
 Henri: [i]*Psshhhhh*[/i]
 Henri: [i]*Sniff sniff*[/i]
@@ -78,7 +80,9 @@ Henri: Pasha don't stress, life is too short to worry about this. It's just a pe
 Pasha: Ah ah, but it meant a lot to you. Seeing as how you had kept it all this time. I want you to have it again!
 Pasha: I know I can remake it too, it cannot be that hard. I've made countless perfumes since then, I am capable of-
 <<changeNPCPortrait PortraitContainer "placeHolder_Henri">>
-Henri: Why don't we catch up somewhere else. I'm sure you're free to leave the floor, your employees seem to be handling it just fine.
+Henri: Pasha. 
+Henri: Why don't we catch up somewhere else. 
+Henri: I'm sure you're free to leave the floor, your employees seem to be handling it just fine.
 <<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
 Pasha: …But…
 Pasha: Ah, well. Then we can head a little down the street to the coffee shop I frequent.

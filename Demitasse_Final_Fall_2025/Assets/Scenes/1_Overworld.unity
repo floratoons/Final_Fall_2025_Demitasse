@@ -971,6 +971,16 @@ MonoBehaviour:
   buttonManagerScript: {fileID: 0}
   buttonCounterObject: {fileID: 1321417554}
   investigationInstructions: {fileID: 141286826}
+  chairButton: {fileID: 493190820}
+  chandelierButton: {fileID: 648739737}
+  closeBooksButton: {fileID: 1215814169}
+  ingredientJarsButton: {fileID: 2027190562}
+  ladderButton: {fileID: 2040024455}
+  openBookButton: {fileID: 866886407}
+  counterButton: {fileID: 1232023444}
+  wrappedOrderButton: {fileID: 1929274994}
+  croissantButton: {fileID: 1616506833}
+  letterButton: {fileID: 2071343590}
 --- !u!1 &226231157
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,7 +2465,7 @@ GameObject:
   - component: {fileID: 493190824}
   m_Layer: 5
   m_Name: Chair
-  m_TagString: Untagged
+  m_TagString: PerfumeryButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3422,7 +3432,7 @@ GameObject:
   - component: {fileID: 648739741}
   m_Layer: 5
   m_Name: Chandelier
-  m_TagString: Untagged
+  m_TagString: PerfumeryButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4327,7 +4337,7 @@ GameObject:
   - component: {fileID: 866886411}
   m_Layer: 5
   m_Name: OpenBook
-  m_TagString: Untagged
+  m_TagString: PerfumeryButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6285,7 +6295,7 @@ GameObject:
   - component: {fileID: 1215814173}
   m_Layer: 5
   m_Name: ClosedBooks
-  m_TagString: Untagged
+  m_TagString: PerfumeryButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6474,7 +6484,7 @@ GameObject:
   - component: {fileID: 1232023448}
   m_Layer: 5
   m_Name: Counter
-  m_TagString: Untagged
+  m_TagString: PerfumeryButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7019,7 +7029,7 @@ GameObject:
   - component: {fileID: 1321417556}
   m_Layer: 5
   m_Name: ButtonCounter
-  m_TagString: Untagged
+  m_TagString: PerfumeryButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7420,7 +7430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.59607846}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7894,7 +7904,7 @@ GameObject:
   - component: {fileID: 1616506835}
   m_Layer: 5
   m_Name: Croissant
-  m_TagString: Untagged
+  m_TagString: PerfumeryButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9364,8 +9374,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286604374
-  m_fontColor: {r: 0.3372549, g: 0.39215687, b: 0.5019608, a: 1}
+    rgba: 4284890944
+  m_fontColor: {r: 0.25101212, g: 0.24775277, b: 0.4009434, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9382,8 +9392,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 13
+  m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9396,7 +9406,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
-  m_paragraphSpacing: -10
+  m_paragraphSpacing: -15
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
@@ -9525,7 +9535,7 @@ GameObject:
   - component: {fileID: 1929274998}
   m_Layer: 5
   m_Name: WrappedOrder
-  m_TagString: Untagged
+  m_TagString: PerfumeryButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9841,7 +9851,7 @@ GameObject:
   - component: {fileID: 2027190566}
   m_Layer: 5
   m_Name: IngredientJars
-  m_TagString: Untagged
+  m_TagString: PerfumeryButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10065,7 +10075,7 @@ GameObject:
   - component: {fileID: 2040024459}
   m_Layer: 5
   m_Name: Ladder
-  m_TagString: Untagged
+  m_TagString: PerfumeryButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10366,7 +10376,7 @@ GameObject:
   - component: {fileID: 2071343594}
   m_Layer: 5
   m_Name: Letter
-  m_TagString: Untagged
+  m_TagString: PerfumeryButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
