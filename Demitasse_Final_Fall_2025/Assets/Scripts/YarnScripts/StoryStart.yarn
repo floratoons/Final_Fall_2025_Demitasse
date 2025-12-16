@@ -138,15 +138,16 @@ Pasha: Yes, yes, your drink guessing skills are still phenomenal. One sugar on t
 Jacque: A double shot of espresso, two sugars for you and a bit of steamed oat milk on the side. 
 Jacque: I got it Pasha, don't worry.
 <<changeNPCPortrait PortraitContainer "placeHolder_Pasha">>
-Pasha: [i]sigh[/i] 
+Pasha: [i]*sigh*[/i] 
 Pasha: Thank you Jacque.
 //Moves to the side.
-Pasha: Cafe de Chartreux has changed a lot since I first started coming here. 
-Pasha: Used to be an old rustic cafe on the corner, it still has that charm of course, but now they cater to the younger generation.
-Pasha: They're all enamored by the idea of a specialty drink, but nothing beats a strong espresso.
-Pasha: Though I guess it isn't so bad, it gives Jacque some fuel for his passion and he is really good at what he does. 
-Pasha: Not even just the coffee part, talking to people. He does it all so effortlessly and everyone notices.
-Pasha: Even the customer before me wanted to hang out with him, just your local barista and his millionth side quest alongside his thriving work. 
+Pasha: [i]Cafe de Chartreux has changed a lot since I first started coming here.[/i] 
+Pasha: [i]Used to be an old rustic cafe on the corner, it still has that charm of course, but now they cater to the younger generation.[/i] 
+Pasha: [i]They're all enamored by the idea of a specialty drink, but nothing beats a strong espresso.[/i] 
+Pasha: [i]Though I guess it isn't so bad, it gives Jacque some fuel for his passion and he is really good at what he does.[/i]  
+Pasha: [i]Not even just the coffee part, talking to people. He does it all so effortlessly and everyone notices.[/i] 
+Pasha: [i]Even the customer before me wanted to hang out with him![/i] 
+Pasha: [i]Just your local barista and his millionth side quest alongside his thriving work. Hah.[/i] 
 //break
 <<changeNPCPortrait PortraitContainer "placeHolder_Jacque">>
 Jacque: One espresso for you madam, and one cafe au lait for your friend.
@@ -217,7 +218,7 @@ Henri: Pasha, will you remember me once I pass?
 Pasha: Henri. Of course I will.
 Henri: Do you remember our last stop on that day?
 Pasha: I went back to pack.
-Henri: Well yes, but I also poured us some late night coffees. Black and a couple of sugars.
+Henri: Well yes... but, I also poured us some late night coffees. Black and a couple of sugars!
 Henri: Reminded me of a long night workshopping with you, needing that burst of energy.
 Henri: I thought it couldn't hurt to do it a final time. 
 Henri: ...

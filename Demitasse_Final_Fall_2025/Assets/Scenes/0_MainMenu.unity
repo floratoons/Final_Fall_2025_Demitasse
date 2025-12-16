@@ -377,6 +377,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ed3ca67563c2e4dac7e2f5e694068d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonManager
+  button: {fileID: 0}
+  buttonClicks: 0
+  continueOption: {fileID: 0}
+  playerInstructions: {fileID: 0}
 --- !u!4 &778801783
 Transform:
   m_ObjectHideFlags: 0

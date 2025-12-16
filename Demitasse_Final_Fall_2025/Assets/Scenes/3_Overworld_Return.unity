@@ -847,6 +847,7 @@ MonoBehaviour:
   buttonManagerScript: {fileID: 0}
   buttonCounterObject: {fileID: 0}
   investigationInstructions: {fileID: 0}
+  investigationActive: 0
   chairButton: {fileID: 0}
   chandelierButton: {fileID: 0}
   closeBooksButton: {fileID: 0}
@@ -4001,15 +4002,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153398277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5373983, y: 1.8114262, z: 1.5373983}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1.8499514, y: 2.1796892, z: 1.8499514}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 209441257}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: -72}
+  m_AnchoredPosition: {x: -243, y: -110}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1153398279
@@ -7856,8 +7857,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4484371483478952859}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.37475, y: 0.75668, z: -5.12}
+  m_LocalRotation: {x: -0.00034455388, y: 0.08773747, z: -0.003911926, w: 0.9961359}
+  m_LocalPosition: {x: -0.37475, y: 0.75668, z: -3.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7866,7 +7867,7 @@ Transform:
   - {fileID: 5859080775849501913}
   - {fileID: 625342938633445008}
   m_Father: {fileID: 1206262199}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 10.067, z: -0.45}
 --- !u!4 &625342938633445008
 Transform:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ObjectClickandHover : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public class ObjectClickandHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     // This script is attempting to cause hovering over objects to show outline --
     // Then on click -- dialogue for each object is invoked.
@@ -13,39 +13,39 @@ public class ObjectClickandHover : MonoBehaviour, IPointerClickHandler, IPointer
 
     // UI Elements
     public Outline itemOutline;
-    public float outlineX = 0;
-    public float outlineY = 0;
+    public float outlineX = 1;
+    public float outlineY = 1;
+
+    public GameManager gameManagerScript;
+    public GameObject gameManagementObject;
 
     public void Start()
     {
         itemOutline = GetComponent<Outline>();
         canClick = true;
+
+        gameManagerScript = gameManagementObject.GetComponent<GameManager>();
     }
 
-    // Click
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        
-    }
-
+    
     // Hovering
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (canClick)
+        if (gameManagerScript.investigationActive == true)
         {
             itemOutline.effectDistance = new Vector2(outlineX, outlineY);
             Debug.Log("Cursor Entered Obj");
         }
         else
         {
-            
+            itemOutline.effectDistance = new Vector2(1f, 1f);
         }
     }
 
     // Leave Hovering
     public void OnPointerExit(PointerEventData eventData)
     {
-        itemOutline.effectDistance = new Vector2(0f,0f);
+        itemOutline.effectDistance = new Vector2(1f,1f);
         Debug.Log("Cursor Exited Obj");
     }
 }

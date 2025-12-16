@@ -971,6 +971,7 @@ MonoBehaviour:
   buttonManagerScript: {fileID: 0}
   buttonCounterObject: {fileID: 1321417554}
   investigationInstructions: {fileID: 141286826}
+  investigationActive: 0
   chairButton: {fileID: 493190820}
   chandelierButton: {fileID: 648739737}
   closeBooksButton: {fileID: 1215814169}
@@ -2039,17 +2040,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433554175}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.004631512, w: 0.99998933}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.049306065, y: 0.090715885, z: 0.16334265}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1826614285}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.531}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.54236674, y: 34.711014}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -0.3, y: 30.4}
+  m_SizeDelta: {x: 210, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &433554177
 MonoBehaviour:
@@ -2071,26 +2072,25 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ma ch\xE8re Pasha Poodl,\r\n\r\n\tI am writing this letter to request
-    a favor from one of my most successful proteges I have ever had the pleasure
-    of working with. See I am coming into the city in a week's time, you know I do
-    not have this opportunity often. So I\u2019d like to see what has changed in
-    Paris, though I\u2019d also like to pick up a fragrance from you. If you remember
-    the one you had mixed just before parting ways with me to open up shop in the
-    city. That, that is the one I would love to get my hands on. It has been a scent
-    so dear to me, but it has run its course. Please do not worry if you do not have
-    it, I still plan to see you when I arrive.\r\n\r\n\t\t\t\tBien a vous \r\n\t\t\t\tHenri
-    Briard\r\n"
+  m_text: "\r\n\r\n\tI am writing this letter to request a favor from one of my most
+    successful proteges I have ever had the pleasure of working with. \n\n\tSee I
+    am coming into the city in a week's time, you know I do not have this opportunity
+    often. So I\u2019d like to see what has changed in Paris, though I\u2019d also
+    like to pick up a fragrance from you. If you remember the one you had mixed just
+    before parting ways with me to open up shop in the city. That, that is the one
+    I would love to get my hands on. It has been a scent so dear to me, but it has
+    run its course.\n\n\tPlease do not worry if you do not have it, I still plan
+    to see you when I arrive.\r\n\r\n\t\t\t\t\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3c4b1993de006ec4f9c9c48ec95801a6, type: 2}
-  m_sharedMaterial: {fileID: 2290451096136674485, guid: 3c4b1993de006ec4f9c9c48ec95801a6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d7be087fe181e6d478e77583755c0fa4, type: 2}
+  m_sharedMaterial: {fileID: 1167813157170805659, guid: d7be087fe181e6d478e77583755c0fa4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279308808
-  m_fontColor: {r: 0.029703626, g: 0.07075471, b: 0.06721953, a: 1}
+    rgba: 4283381047
+  m_fontColor: {r: 0.21399096, g: 0.20705768, b: 0.31132078, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2107,21 +2107,21 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.18
-  m_fontSizeBase: 31.18
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 3
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -5
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -6.18
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -65
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
@@ -2463,6 +2463,7 @@ GameObject:
   - component: {fileID: 493190821}
   - component: {fileID: 493190820}
   - component: {fileID: 493190824}
+  - component: {fileID: 493190825}
   m_Layer: 5
   m_Name: Chair
   m_TagString: PerfumeryButtons
@@ -2582,7 +2583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
   m_EffectColor: {r: 0.31728372, g: 0.2804379, b: 0.4339623, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
+  m_EffectDistance: {x: 1, y: 1}
   m_UseGraphicAlpha: 1
 --- !u!114 &493190822
 MonoBehaviour:
@@ -2638,6 +2639,27 @@ MonoBehaviour:
   buttonClicks: 0
   continueOption: {fileID: 0}
   playerInstructions: {fileID: 0}
+--- !u!114 &493190825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493190818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00de9bbeba0002b4caec9b1013638229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectClickandHover
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  canClick: 0
+  itemOutline: {fileID: 0}
+  outlineX: 3
+  outlineY: 3
+  gameManagerScript: {fileID: 0}
+  gameManagementObject: {fileID: 211121716}
 --- !u!1 &517616621
 GameObject:
   m_ObjectHideFlags: 0
@@ -3430,6 +3452,7 @@ GameObject:
   - component: {fileID: 648739738}
   - component: {fileID: 648739737}
   - component: {fileID: 648739741}
+  - component: {fileID: 648739742}
   m_Layer: 5
   m_Name: Chandelier
   m_TagString: PerfumeryButtons
@@ -3549,7 +3572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
   m_EffectColor: {r: 0.31728372, g: 0.2804379, b: 0.4339623, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
+  m_EffectDistance: {x: 1, y: 1}
   m_UseGraphicAlpha: 1
 --- !u!114 &648739739
 MonoBehaviour:
@@ -3605,6 +3628,27 @@ MonoBehaviour:
   buttonClicks: 0
   continueOption: {fileID: 0}
   playerInstructions: {fileID: 0}
+--- !u!114 &648739742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648739735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00de9bbeba0002b4caec9b1013638229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectClickandHover
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  canClick: 0
+  itemOutline: {fileID: 0}
+  outlineX: 3
+  outlineY: 3
+  gameManagerScript: {fileID: 0}
+  gameManagementObject: {fileID: 211121716}
 --- !u!1 &686929745
 GameObject:
   m_ObjectHideFlags: 0
@@ -4335,6 +4379,7 @@ GameObject:
   - component: {fileID: 866886408}
   - component: {fileID: 866886407}
   - component: {fileID: 866886411}
+  - component: {fileID: 866886412}
   m_Layer: 5
   m_Name: OpenBook
   m_TagString: PerfumeryButtons
@@ -4454,7 +4499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
   m_EffectColor: {r: 0.31728372, g: 0.2804379, b: 0.4339623, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
+  m_EffectDistance: {x: 1, y: 1}
   m_UseGraphicAlpha: 1
 --- !u!114 &866886409
 MonoBehaviour:
@@ -4510,6 +4555,27 @@ MonoBehaviour:
   buttonClicks: 0
   continueOption: {fileID: 0}
   playerInstructions: {fileID: 0}
+--- !u!114 &866886412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866886405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00de9bbeba0002b4caec9b1013638229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectClickandHover
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  canClick: 0
+  itemOutline: {fileID: 0}
+  outlineX: 3
+  outlineY: 3
+  gameManagerScript: {fileID: 0}
+  gameManagementObject: {fileID: 211121716}
 --- !u!1 &900114142
 GameObject:
   m_ObjectHideFlags: 0
@@ -6293,6 +6359,7 @@ GameObject:
   - component: {fileID: 1215814170}
   - component: {fileID: 1215814169}
   - component: {fileID: 1215814173}
+  - component: {fileID: 1215814174}
   m_Layer: 5
   m_Name: ClosedBooks
   m_TagString: PerfumeryButtons
@@ -6412,7 +6479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
   m_EffectColor: {r: 0.31728372, g: 0.2804379, b: 0.4339623, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
+  m_EffectDistance: {x: 1, y: 1}
   m_UseGraphicAlpha: 1
 --- !u!114 &1215814171
 MonoBehaviour:
@@ -6468,6 +6535,27 @@ MonoBehaviour:
   buttonClicks: 0
   continueOption: {fileID: 0}
   playerInstructions: {fileID: 0}
+--- !u!114 &1215814174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215814167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00de9bbeba0002b4caec9b1013638229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectClickandHover
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  canClick: 0
+  itemOutline: {fileID: 0}
+  outlineX: 3
+  outlineY: 3
+  gameManagerScript: {fileID: 0}
+  gameManagementObject: {fileID: 211121716}
 --- !u!1 &1232023442
 GameObject:
   m_ObjectHideFlags: 0
@@ -6482,6 +6570,7 @@ GameObject:
   - component: {fileID: 1232023445}
   - component: {fileID: 1232023444}
   - component: {fileID: 1232023448}
+  - component: {fileID: 1232023449}
   m_Layer: 5
   m_Name: Counter
   m_TagString: PerfumeryButtons
@@ -6601,7 +6690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
   m_EffectColor: {r: 0.31728372, g: 0.2804379, b: 0.4339623, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
+  m_EffectDistance: {x: 1, y: 1}
   m_UseGraphicAlpha: 1
 --- !u!114 &1232023446
 MonoBehaviour:
@@ -6657,6 +6746,27 @@ MonoBehaviour:
   buttonClicks: 0
   continueOption: {fileID: 0}
   playerInstructions: {fileID: 0}
+--- !u!114 &1232023449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232023442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00de9bbeba0002b4caec9b1013638229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectClickandHover
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  canClick: 0
+  itemOutline: {fileID: 0}
+  outlineX: 3
+  outlineY: 3
+  gameManagerScript: {fileID: 0}
+  gameManagementObject: {fileID: 211121716}
 --- !u!1 &1244468356
 GameObject:
   m_ObjectHideFlags: 0
@@ -7455,81 +7565,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504072510}
   m_CullTransparentMesh: 1
---- !u!1 &1519183474
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1519183475}
-  - component: {fileID: 1519183477}
-  - component: {fileID: 1519183476}
-  m_Layer: 5
-  m_Name: Temp_ShadowImg
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1519183475
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519183474}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.34955004, y: 0.80723286, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1826614285}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.4160042, y: -3.7193527}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1519183476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519183474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.8509804}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1519183477
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519183474}
-  m_CullTransparentMesh: 1
 --- !u!1 &1576882345
 GameObject:
   m_ObjectHideFlags: 0
@@ -7647,14 +7682,14 @@ RectTransform:
   m_GameObject: {fileID: 1577022840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.34955004, y: 0.80723286, z: 1}
+  m_LocalScale: {x: 0.8606282, y: 0.92968166, z: 0.94254}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1826614285}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -2.8, y: -1.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1577022842
@@ -7670,14 +7705,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9293146, b: 0.8584906, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 24f6d1ce3716b1748890414072f2892f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7902,6 +7937,7 @@ GameObject:
   - component: {fileID: 1616506834}
   - component: {fileID: 1616506833}
   - component: {fileID: 1616506835}
+  - component: {fileID: 1616506836}
   m_Layer: 5
   m_Name: Croissant
   m_TagString: PerfumeryButtons
@@ -8059,7 +8095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
   m_EffectColor: {r: 0.31728372, g: 0.2804379, b: 0.4339623, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
+  m_EffectDistance: {x: 1, y: 1}
   m_UseGraphicAlpha: 1
 --- !u!114 &1616506835
 MonoBehaviour:
@@ -8077,6 +8113,27 @@ MonoBehaviour:
   buttonClicks: 0
   continueOption: {fileID: 0}
   playerInstructions: {fileID: 0}
+--- !u!114 &1616506836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616506829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00de9bbeba0002b4caec9b1013638229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectClickandHover
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  canClick: 0
+  itemOutline: {fileID: 0}
+  outlineX: 3
+  outlineY: 3
+  gameManagerScript: {fileID: 0}
+  gameManagementObject: {fileID: 211121716}
 --- !u!1 &1624059667
 GameObject:
   m_ObjectHideFlags: 0
@@ -9121,7 +9178,7 @@ RectTransform:
   m_Children:
   - {fileID: 1244468357}
   - {fileID: 1875424249}
-  - {fileID: 1519183475}
+  - {fileID: 1952517701}
   - {fileID: 1577022841}
   - {fileID: 433554176}
   - {fileID: 1703546741}
@@ -9533,6 +9590,7 @@ GameObject:
   - component: {fileID: 1929274995}
   - component: {fileID: 1929274994}
   - component: {fileID: 1929274998}
+  - component: {fileID: 1929274999}
   m_Layer: 5
   m_Name: WrappedOrder
   m_TagString: PerfumeryButtons
@@ -9652,7 +9710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
   m_EffectColor: {r: 0.31728372, g: 0.2804379, b: 0.4339623, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
+  m_EffectDistance: {x: 1, y: 1}
   m_UseGraphicAlpha: 1
 --- !u!114 &1929274996
 MonoBehaviour:
@@ -9708,6 +9766,102 @@ MonoBehaviour:
   buttonClicks: 0
   continueOption: {fileID: 0}
   playerInstructions: {fileID: 0}
+--- !u!114 &1929274999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929274992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00de9bbeba0002b4caec9b1013638229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectClickandHover
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  canClick: 0
+  itemOutline: {fileID: 0}
+  outlineX: 3
+  outlineY: 3
+  gameManagerScript: {fileID: 0}
+  gameManagementObject: {fileID: 211121716}
+--- !u!1 &1952517700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1952517701}
+  - component: {fileID: 1952517703}
+  - component: {fileID: 1952517702}
+  m_Layer: 5
+  m_Name: Temp_LetterBG Shadow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1952517701
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952517700}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8606282, y: 0.92968166, z: 0.94254}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1826614285}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.5, y: -3.4}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1952517702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952517700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.65882355}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 24f6d1ce3716b1748890414072f2892f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1952517703
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952517700}
+  m_CullTransparentMesh: 1
 --- !u!1 &1977438680
 GameObject:
   m_ObjectHideFlags: 0
@@ -9849,6 +10003,7 @@ GameObject:
   - component: {fileID: 2027190563}
   - component: {fileID: 2027190562}
   - component: {fileID: 2027190566}
+  - component: {fileID: 2027190567}
   m_Layer: 5
   m_Name: IngredientJars
   m_TagString: PerfumeryButtons
@@ -9968,7 +10123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
   m_EffectColor: {r: 0.31728372, g: 0.2804379, b: 0.4339623, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
+  m_EffectDistance: {x: 1, y: 1}
   m_UseGraphicAlpha: 1
 --- !u!114 &2027190564
 MonoBehaviour:
@@ -10024,6 +10179,27 @@ MonoBehaviour:
   buttonClicks: 0
   continueOption: {fileID: 0}
   playerInstructions: {fileID: 0}
+--- !u!114 &2027190567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027190560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00de9bbeba0002b4caec9b1013638229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectClickandHover
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  canClick: 0
+  itemOutline: {fileID: 0}
+  outlineX: 3
+  outlineY: 3
+  gameManagerScript: {fileID: 0}
+  gameManagementObject: {fileID: 211121716}
 --- !u!1 &2036257803
 GameObject:
   m_ObjectHideFlags: 0
@@ -10073,6 +10249,7 @@ GameObject:
   - component: {fileID: 2040024456}
   - component: {fileID: 2040024455}
   - component: {fileID: 2040024459}
+  - component: {fileID: 2040024460}
   m_Layer: 5
   m_Name: Ladder
   m_TagString: PerfumeryButtons
@@ -10192,7 +10369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
   m_EffectColor: {r: 0.31728372, g: 0.2804379, b: 0.4339623, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
+  m_EffectDistance: {x: 1, y: 1}
   m_UseGraphicAlpha: 1
 --- !u!114 &2040024457
 MonoBehaviour:
@@ -10248,6 +10425,27 @@ MonoBehaviour:
   buttonClicks: 0
   continueOption: {fileID: 0}
   playerInstructions: {fileID: 0}
+--- !u!114 &2040024460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040024453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00de9bbeba0002b4caec9b1013638229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectClickandHover
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  canClick: 0
+  itemOutline: {fileID: 0}
+  outlineX: 3
+  outlineY: 3
+  gameManagerScript: {fileID: 0}
+  gameManagementObject: {fileID: 211121716}
 --- !u!1 &2045099326
 GameObject:
   m_ObjectHideFlags: 0
@@ -10374,6 +10572,7 @@ GameObject:
   - component: {fileID: 2071343591}
   - component: {fileID: 2071343590}
   - component: {fileID: 2071343594}
+  - component: {fileID: 2071343595}
   m_Layer: 5
   m_Name: Letter
   m_TagString: PerfumeryButtons
@@ -10493,7 +10692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
   m_EffectColor: {r: 0.31728372, g: 0.2804379, b: 0.4339623, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
+  m_EffectDistance: {x: 1, y: 1}
   m_UseGraphicAlpha: 1
 --- !u!114 &2071343592
 MonoBehaviour:
@@ -10549,6 +10748,27 @@ MonoBehaviour:
   buttonClicks: 0
   continueOption: {fileID: 0}
   playerInstructions: {fileID: 0}
+--- !u!114 &2071343595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071343588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00de9bbeba0002b4caec9b1013638229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectClickandHover
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  canClick: 0
+  itemOutline: {fileID: 0}
+  outlineX: 3
+  outlineY: 3
+  gameManagerScript: {fileID: 0}
+  gameManagementObject: {fileID: 211121716}
 --- !u!1 &2072800504
 GameObject:
   m_ObjectHideFlags: 0

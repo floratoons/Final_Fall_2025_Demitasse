@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject investigationInstructions;
 
+    public bool investigationActive = false;
+
     public Button chairButton;
     public Button chandelierButton;
     public Button closeBooksButton;
@@ -98,6 +100,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Would be starting the investigation");
 
         cameraToAdjust.GetComponent<CinemachineInputAxisController>().enabled = true;
+
+        investigationActive = true;
+        Debug.Log("Investigation Active?:" + investigationActive);
 
         chairButton.interactable = true;
         chandelierButton.interactable = true;
